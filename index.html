@@ -33,26 +33,17 @@
             box-sizing: border-box;
         }
 
-
         html {
             scroll-behavior: smooth;
         }
 
-
         body {
             min-height: 100vh;
-
             background: #000;
-
             color: white;
-
-            font-family:
-                Arial,
-                sans-serif;
-
+            font-family: Arial, sans-serif;
             overflow-x: hidden;
         }
-
 
         /* =====================================================
            NAVBAR
@@ -60,7 +51,6 @@
 
         .navbar {
             position: fixed;
-
             top: 0;
             left: 0;
 
@@ -76,21 +66,15 @@
                     rgba(14, 6, 25, 0.92)
                 );
 
-            backdrop-filter:
-                blur(16px);
-
-            -webkit-backdrop-filter:
-                blur(16px);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
 
             border-bottom:
-                1px solid
-                rgba(170, 80, 255, 0.16);
+                1px solid rgba(170, 80, 255, 0.16);
 
             box-shadow:
-                0 8px 30px
-                rgba(0, 0, 0, 0.45);
+                0 8px 30px rgba(0, 0, 0, 0.45);
         }
-
 
         .nav-inner {
             width: 100%;
@@ -99,10 +83,8 @@
             padding: 0 28px;
 
             display: flex;
-
             align-items: center;
         }
-
 
         /* =====================================================
            LOGO
@@ -114,17 +96,14 @@
             left: 28px;
             top: 50%;
 
-            transform:
-                translateY(-50%);
+            transform: translateY(-50%);
         }
-
 
         .site-logo {
             width: 44px;
             height: 44px;
 
             object-fit: contain;
-
             display: block;
 
             transition:
@@ -132,10 +111,8 @@
                 filter 0.25s ease;
         }
 
-
         .site-logo-link:hover .site-logo {
-            transform:
-                scale(1.08);
+            transform: scale(1.08);
 
             filter:
                 drop-shadow(
@@ -143,7 +120,6 @@
                     rgba(170, 80, 255, 0.8)
                 );
         }
-
 
         /* =====================================================
            NAV LINKS
@@ -153,19 +129,16 @@
             width: 100%;
 
             display: flex;
-
             align-items: center;
             justify-content: center;
 
             gap: 34px;
         }
 
-
         .nav-links a {
             position: relative;
 
             display: inline-flex;
-
             align-items: center;
 
             gap: 8px;
@@ -178,7 +151,6 @@
             text-decoration: none;
 
             font-size: 15px;
-
             font-weight: 500;
 
             transition:
@@ -186,14 +158,12 @@
                 transform 0.25s ease;
         }
 
-
         .nav-links a:hover {
             color: white;
 
             transform:
                 translateY(-1px);
         }
-
 
         .nav-links a::after {
             content: "";
@@ -223,11 +193,9 @@
                 width 0.25s ease;
         }
 
-
         .nav-links a:hover::after {
             width: 100%;
         }
-
 
         .icon {
             width: 19px;
@@ -235,10 +203,8 @@
 
             flex-shrink: 0;
 
-            color:
-                currentColor;
+            color: currentColor;
         }
-
 
         /* =====================================================
            GET MODS
@@ -251,7 +217,6 @@
             justify-content: center;
 
             height: 44px;
-
             min-width: 120px;
 
             padding: 0 24px;
@@ -271,11 +236,8 @@
 
             color: white !important;
 
-            font-size:
-                14px !important;
-
-            font-weight:
-                600 !important;
+            font-size: 14px !important;
+            font-weight: 600 !important;
 
             box-shadow:
                 0 0 12px
@@ -290,11 +252,9 @@
                 border-color 0.25s ease;
         }
 
-
         .get-mods-nav::after {
             display: none;
         }
-
 
         .get-mods-nav:hover {
             transform:
@@ -312,25 +272,20 @@
                 rgba(145, 50, 255, 0.4);
         }
 
-
         /* =====================================================
            SECTIONS
         ===================================================== */
 
         main {
             position: relative;
-
             z-index: 5;
         }
 
-
         .page-section {
             width: 100%;
-
             min-height: 100vh;
 
             display: flex;
-
             align-items: center;
             justify-content: center;
 
@@ -340,7 +295,6 @@
                 110px 25px 70px;
         }
 
-
         /* =====================================================
            HOME
         ===================================================== */
@@ -349,7 +303,6 @@
             max-width: 900px;
         }
 
-
         .hero-title {
             font-family:
                 "Orbitron",
@@ -357,11 +310,7 @@
                 sans-serif;
 
             font-size:
-                clamp(
-                    48px,
-                    8vw,
-                    100px
-                );
+                clamp(48px, 8vw, 100px);
 
             font-weight: 800;
 
@@ -378,17 +327,12 @@
                     #ffffff
                 );
 
-            background-size:
-                250% auto;
+            background-size: 250% auto;
 
-            -webkit-background-clip:
-                text;
+            -webkit-background-clip: text;
+            background-clip: text;
 
-            background-clip:
-                text;
-
-            -webkit-text-fill-color:
-                transparent;
+            -webkit-text-fill-color: transparent;
 
             animation:
                 titleGlow
@@ -397,7 +341,6 @@
                 infinite;
         }
 
-
         .hero-subtitle {
             font-family:
                 "Orbitron",
@@ -405,69 +348,43 @@
                 sans-serif;
 
             font-size:
-                clamp(
-                    14px,
-                    2vw,
-                    21px
-                );
+                clamp(14px, 2vw, 21px);
 
             letter-spacing: 2px;
 
             color:
-                rgba(
-                    235,
-                    220,
-                    250,
-                    0.78
-                );
+                rgba(235, 220, 250, 0.78);
         }
-
-
-        /* =====================================================
-           TITLE ANIMATION
-        ===================================================== */
 
         @keyframes titleGlow {
 
             0% {
-                background-position:
-                    0% center;
+                background-position: 0% center;
             }
 
             100% {
-                background-position:
-                    250% center;
+                background-position: 250% center;
             }
 
         }
-
 
         /* =====================================================
            DOWNLOADS
         ===================================================== */
 
         #downloads {
-            align-items:
-                flex-start;
+            align-items: flex-start;
 
-            padding-top:
-                130px;
-
-            padding-bottom:
-                100px;
+            padding-top: 130px;
+            padding-bottom: 100px;
         }
-
 
         .downloads-container {
             width: 100%;
+            max-width: 1200px;
 
-            max-width:
-                1200px;
-
-            margin:
-                auto;
+            margin: auto;
         }
-
 
         .downloads-title {
             font-family:
@@ -476,20 +393,13 @@
                 sans-serif;
 
             font-size:
-                clamp(
-                    38px,
-                    6vw,
-                    70px
-                );
+                clamp(38px, 6vw, 70px);
 
-            font-weight:
-                800;
+            font-weight: 800;
 
-            letter-spacing:
-                3px;
+            letter-spacing: 3px;
 
-            margin-bottom:
-                12px;
+            margin-bottom: 12px;
 
             background:
                 linear-gradient(
@@ -500,17 +410,12 @@
                     #ffffff
                 );
 
-            background-size:
-                250% auto;
+            background-size: 250% auto;
 
-            -webkit-background-clip:
-                text;
+            -webkit-background-clip: text;
+            background-clip: text;
 
-            background-clip:
-                text;
-
-            -webkit-text-fill-color:
-                transparent;
+            -webkit-text-fill-color: transparent;
 
             animation:
                 titleGlow
@@ -519,7 +424,6 @@
                 infinite;
         }
 
-
         .downloads-subtitle {
             font-family:
                 "Orbitron",
@@ -527,23 +431,14 @@
                 sans-serif;
 
             color:
-                rgba(
-                    225,
-                    215,
-                    240,
-                    0.65
-                );
+                rgba(225, 215, 240, 0.65);
 
-            font-size:
-                14px;
+            font-size: 14px;
 
-            letter-spacing:
-                1px;
+            letter-spacing: 1px;
 
-            margin-bottom:
-                45px;
+            margin-bottom: 45px;
         }
-
 
         /* =====================================================
            SLIDER
@@ -553,9 +448,7 @@
             position: relative;
 
             width: 100%;
-
-            height:
-                500px;
+            height: 500px;
 
             display: flex;
 
@@ -565,7 +458,6 @@
             overflow: visible;
         }
 
-
         /* =====================================================
            MOD CARDS
         ===================================================== */
@@ -573,23 +465,14 @@
         .mod-card {
             position: absolute;
 
-            width:
-                330px;
+            width: 330px;
+            height: 425px;
 
-            height:
-                425px;
-
-            border-radius:
-                22px;
+            border-radius: 22px;
 
             border:
                 1px solid
-                rgba(
-                    170,
-                    80,
-                    255,
-                    0.28
-                );
+                rgba(170, 80, 255, 0.28);
 
             background:
                 linear-gradient(
@@ -598,11 +481,8 @@
                     rgba(15, 7, 27, 0.94)
                 );
 
-            backdrop-filter:
-                blur(15px);
-
-            -webkit-backdrop-filter:
-                blur(15px);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
 
             overflow: hidden;
 
@@ -618,12 +498,9 @@
                 ),
 
                 opacity 0.45s ease,
-
                 filter 0.45s ease,
-
                 box-shadow 0.45s ease;
         }
-
 
         /* =====================================================
            CARD POSITIONS
@@ -635,14 +512,11 @@
                 translateX(0)
                 scale(1);
 
-            z-index:
-                50;
+            z-index: 50;
 
-            opacity:
-                1;
+            opacity: 1;
 
-            filter:
-                none;
+            filter: none;
 
             box-shadow:
 
@@ -653,23 +527,19 @@
                 rgba(145, 50, 255, 0.25);
         }
 
-
         .mod-card[data-position="1"] {
 
             transform:
                 translateX(390px)
                 scale(0.78);
 
-            z-index:
-                30;
+            z-index: 30;
 
-            opacity:
-                0.72;
+            opacity: 0.72;
 
             filter:
                 brightness(0.65);
         }
-
 
         .mod-card[data-position="2"] {
 
@@ -677,16 +547,13 @@
                 translateX(700px)
                 scale(0.62);
 
-            z-index:
-                20;
+            z-index: 20;
 
-            opacity:
-                0.42;
+            opacity: 0.42;
 
             filter:
                 brightness(0.42);
         }
-
 
         .mod-card[data-position="3"] {
 
@@ -694,27 +561,22 @@
                 translateX(-390px)
                 scale(0.78);
 
-            z-index:
-                30;
+            z-index: 30;
 
-            opacity:
-                0.72;
+            opacity: 0.72;
 
             filter:
                 brightness(0.65);
         }
 
-
         .mod-card[data-position="1"]:hover,
         .mod-card[data-position="3"]:hover {
 
-            opacity:
-                0.95;
+            opacity: 0.95;
 
             filter:
                 brightness(0.9);
         }
-
 
         /* =====================================================
            CARD LOGO
@@ -740,12 +602,7 @@
 
             border-bottom:
                 1px solid
-                rgba(
-                    190,
-                    100,
-                    255,
-                    0.25
-                );
+                rgba(190, 100, 255, 0.25);
 
             background:
                 linear-gradient(
@@ -756,14 +613,8 @@
 
             box-shadow:
                 inset 0 0 35px
-                rgba(
-                    170,
-                    70,
-                    255,
-                    0.12
-                );
+                rgba(170, 70, 255, 0.12);
         }
-
 
         .mod-logo span {
 
@@ -772,42 +623,23 @@
                 Arial,
                 sans-serif;
 
-            font-size:
-                78px;
+            font-size: 78px;
 
-            font-weight:
-                800;
+            font-weight: 800;
 
-            color:
-                white;
+            color: white;
 
             text-shadow:
 
                 0 0 10px
-                rgba(
-                    210,
-                    150,
-                    255,
-                    1
-                ),
+                rgba(210, 150, 255, 1),
 
                 0 0 25px
-                rgba(
-                    170,
-                    70,
-                    255,
-                    0.9
-                ),
+                rgba(170, 70, 255, 0.9),
 
                 0 0 55px
-                rgba(
-                    130,
-                    40,
-                    255,
-                    0.6
-                );
+                rgba(130, 40, 255, 0.6);
         }
-
 
         /* =====================================================
            CARD INFO
@@ -819,27 +651,20 @@
 
             left: 0;
             right: 0;
-
             bottom: 0;
 
-            height:
-                57%;
+            height: 57%;
 
             padding:
                 25px 28px;
 
             display: flex;
 
-            flex-direction:
-                column;
+            flex-direction: column;
 
-            align-items:
-                center;
-
-            justify-content:
-                center;
+            align-items: center;
+            justify-content: center;
         }
-
 
         .mod-info h3 {
 
@@ -848,34 +673,22 @@
                 Arial,
                 sans-serif;
 
-            font-size:
-                22px;
+            font-size: 22px;
 
-            margin-bottom:
-                10px;
+            margin-bottom: 10px;
         }
-
 
         .mod-info p {
 
-            font-size:
-                14px;
+            font-size: 14px;
 
-            line-height:
-                1.6;
+            line-height: 1.6;
 
             color:
-                rgba(
-                    225,
-                    215,
-                    240,
-                    0.62
-                );
+                rgba(225, 215, 240, 0.62);
 
-            margin-bottom:
-                20px;
+            margin-bottom: 20px;
         }
-
 
         /* =====================================================
            DOWNLOAD BUTTON
@@ -885,32 +698,21 @@
 
             display: inline-flex;
 
-            align-items:
-                center;
+            align-items: center;
+            justify-content: center;
 
-            justify-content:
-                center;
+            min-width: 135px;
 
-            min-width:
-                135px;
-
-            height:
-                42px;
+            height: 42px;
 
             padding:
                 0 22px;
 
-            border-radius:
-                10px;
+            border-radius: 10px;
 
             border:
                 1px solid
-                rgba(
-                    190,
-                    100,
-                    255,
-                    0.75
-                );
+                rgba(190, 100, 255, 0.75);
 
             background:
                 linear-gradient(
@@ -919,23 +721,18 @@
                     rgba(40, 10, 65, 0.95)
                 );
 
-            color:
-                white;
+            color: white;
 
-            font-size:
-                13px;
+            font-size: 13px;
 
-            font-weight:
-                600;
+            font-weight: 600;
 
-            text-decoration:
-                none;
+            text-decoration: none;
 
             transition:
                 transform 0.25s ease,
                 box-shadow 0.25s ease;
         }
-
 
         .download-button:hover {
 
@@ -945,168 +742,11 @@
             box-shadow:
 
                 0 0 18px
-                rgba(
-                    175,
-                    80,
-                    255,
-                    0.65
-                ),
+                rgba(175, 80, 255, 0.65),
 
                 0 0 35px
-                rgba(
-                    145,
-                    50,
-                    255,
-                    0.25
-                );
+                rgba(145, 50, 255, 0.25);
         }
-
-
-        /* =====================================================
-           COMING SOON
-        ===================================================== */
-
-        .coming-soon {
-
-            display:
-                inline-flex;
-
-            align-items:
-                center;
-
-            justify-content:
-                center;
-
-            min-width:
-                135px;
-
-            height:
-                42px;
-
-            padding:
-                0 22px;
-
-            border-radius:
-                10px;
-
-            border:
-                1px solid
-                rgba(
-                    160,
-                    120,
-                    190,
-                    0.25
-                );
-
-            background:
-                rgba(
-                    35,
-                    20,
-                    50,
-                    0.55
-                );
-
-            color:
-                rgba(
-                    220,
-                    205,
-                    235,
-                    0.45
-                );
-
-            font-size:
-                13px;
-
-            font-weight:
-                600;
-
-            cursor:
-                default;
-        }
-
-
-        /* =====================================================
-           DOTS
-        ===================================================== */
-
-        .slider-controls {
-
-            position: absolute;
-
-            bottom: 0;
-
-            left: 50%;
-
-            transform:
-                translateX(-50%);
-
-            display:
-                flex;
-
-            gap:
-                9px;
-
-            z-index:
-                100;
-        }
-
-
-        .slider-dot {
-
-            width:
-                8px;
-
-            height:
-                8px;
-
-            border:
-                none;
-
-            border-radius:
-                50%;
-
-            background:
-                rgba(
-                    190,
-                    130,
-                    230,
-                    0.28
-                );
-
-            cursor:
-                pointer;
-
-            transition:
-                width 0.25s ease,
-                background 0.25s ease;
-        }
-
-
-        .slider-dot.active {
-
-            width:
-                24px;
-
-            border-radius:
-                20px;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    #9b5cff,
-                    #d77cff
-                );
-
-            box-shadow:
-                0 0 12px
-                rgba(
-                    170,
-                    80,
-                    255,
-                    0.7
-                );
-        }
-
 
         /* =====================================================
            SPACE BACKGROUND
@@ -1125,152 +765,85 @@
 
             z-index: 0;
 
-            pointer-events:
-                none;
+            pointer-events: none;
 
             background:
 
                 radial-gradient(
                     ellipse at 12% 22%,
-                    rgba(
-                        115,
-                        0,
-                        220,
-                        0.24
-                    ),
-                    rgba(
-                        70,
-                        0,
-                        130,
-                        0.10
-                    ) 20%,
+                    rgba(115, 0, 220, 0.24),
+                    rgba(70, 0, 130, 0.10) 20%,
                     transparent 45%
                 ),
 
                 radial-gradient(
                     ellipse at 88% 58%,
-                    rgba(
-                        140,
-                        0,
-                        240,
-                        0.20
-                    ),
-                    rgba(
-                        80,
-                        0,
-                        150,
-                        0.08
-                    ) 22%,
+                    rgba(140, 0, 240, 0.20),
+                    rgba(80, 0, 150, 0.08) 22%,
                     transparent 48%
                 ),
 
                 radial-gradient(
                     ellipse at 45% 105%,
-                    rgba(
-                        100,
-                        0,
-                        220,
-                        0.20
-                    ),
+                    rgba(100, 0, 220, 0.20),
                     transparent 45%
                 ),
 
                 #000;
         }
 
-
         .purple-cloud {
 
             position: absolute;
 
-            border-radius:
-                50%;
+            border-radius: 50%;
 
-            filter:
-                blur(70px);
+            filter: blur(70px);
 
-            opacity:
-                0.35;
+            opacity: 0.35;
         }
-
 
         .cloud1 {
 
-            width:
-                420px;
+            width: 420px;
+            height: 200px;
 
-            height:
-                200px;
-
-            left:
-                -100px;
-
-            top:
-                18%;
+            left: -100px;
+            top: 18%;
 
             background:
-                rgba(
-                    110,
-                    0,
-                    230,
-                    0.45
-                );
+                rgba(110, 0, 230, 0.45);
 
             transform:
                 rotate(-25deg);
         }
 
-
         .cloud2 {
 
-            width:
-                500px;
+            width: 500px;
+            height: 220px;
 
-            height:
-                220px;
-
-            right:
-                -130px;
-
-            top:
-                52%;
+            right: -130px;
+            top: 52%;
 
             background:
-                rgba(
-                    145,
-                    0,
-                    255,
-                    0.34
-                );
+                rgba(145, 0, 255, 0.34);
 
             transform:
                 rotate(20deg);
         }
 
-
         .cloud3 {
 
-            width:
-                400px;
+            width: 400px;
+            height: 180px;
 
-            height:
-                180px;
-
-            left:
-                30%;
-
-            bottom:
-                -100px;
+            left: 30%;
+            bottom: -100px;
 
             background:
-                rgba(
-                    85,
-                    0,
-                    210,
-                    0.34
-                );
+                rgba(85, 0, 210, 0.34);
         }
-
 
         /* =====================================================
            STARS
@@ -1280,17 +853,12 @@
 
             position: absolute;
 
-            width:
-                2px;
+            width: 2px;
+            height: 2px;
 
-            height:
-                2px;
+            background: white;
 
-            background:
-                white;
-
-            border-radius:
-                50%;
+            border-radius: 50%;
 
             box-shadow:
                 0 0 5px white;
@@ -1306,53 +874,37 @@
                 var(--opacity);
         }
 
-
         .star.small {
 
-            width:
-                1px;
-
-            height:
-                1px;
+            width: 1px;
+            height: 1px;
 
             box-shadow:
                 0 0 3px white;
         }
 
-
         .star.big {
 
-            width:
-                3px;
-
-            height:
-                3px;
+            width: 3px;
+            height: 3px;
 
             box-shadow:
 
                 0 0 8px white,
 
                 0 0 15px
-                rgba(
-                    190,
-                    120,
-                    255,
-                    0.65
-                );
+                rgba(190, 120, 255, 0.65);
         }
-
 
         @keyframes twinkle {
 
             0% {
 
-                opacity:
-                    0.02;
+                opacity: 0.02;
 
                 transform:
                     scale(0.6);
             }
-
 
             50% {
 
@@ -1363,18 +915,14 @@
                     scale(1);
             }
 
-
             100% {
 
-                opacity:
-                    0.02;
+                opacity: 0.02;
 
                 transform:
                     scale(0.6);
             }
-
         }
-
 
         /* =====================================================
            MOBILE
@@ -1383,91 +931,62 @@
         @media (max-width: 800px) {
 
             .nav-inner {
-
-                padding:
-                    0 10px;
+                padding: 0 10px;
             }
-
 
             .site-logo-link {
-
-                left:
-                    10px;
+                left: 10px;
             }
-
 
             .site-logo {
 
-                width:
-                    38px;
-
-                height:
-                    38px;
+                width: 38px;
+                height: 38px;
             }
-
 
             .nav-links {
 
-                gap:
-                    10px;
+                gap: 10px;
             }
-
 
             .nav-links a {
 
-                font-size:
-                    10px;
+                font-size: 10px;
 
-                gap:
-                    4px;
+                gap: 4px;
             }
-
 
             .icon {
 
-                width:
-                    15px;
-
-                height:
-                    15px;
+                width: 15px;
+                height: 15px;
             }
-
 
             .get-mods-nav {
 
-                min-width:
-                    95px;
+                min-width: 95px;
 
-                height:
-                    40px;
+                height: 40px;
 
-                padding:
-                    0 12px;
+                padding: 0 12px;
 
                 font-size:
                     11px !important;
             }
 
-
             .mods-slider {
 
-                height:
-                    480px;
+                height: 480px;
 
-                overflow:
-                    hidden;
+                overflow: hidden;
             }
-
 
             .mod-card {
 
-                width:
-                    285px;
+                width: 285px;
 
-                height:
-                    410px;
+                height: 410px;
             }
-
 
             .mod-card[data-position="1"] {
 
@@ -1476,14 +995,12 @@
                     scale(0.70);
             }
 
-
             .mod-card[data-position="2"] {
 
                 transform:
                     translateX(300px)
                     scale(0.55);
             }
-
 
             .mod-card[data-position="3"] {
 
@@ -1492,13 +1009,10 @@
                     scale(0.70);
             }
 
-
             .mod-logo span {
 
-                font-size:
-                    65px;
+                font-size: 65px;
             }
-
         }
 
     </style>
@@ -1517,7 +1031,6 @@
 
         <div class="nav-inner">
 
-
             <a
                 href="#home"
                 class="site-logo-link"
@@ -1534,8 +1047,6 @@
 
             <nav class="nav-links">
 
-
-                <!-- HOME -->
 
                 <a href="#home">
 
@@ -1561,8 +1072,6 @@
 
                 </a>
 
-
-                <!-- DOWNLOADS -->
 
                 <a href="#downloads">
 
@@ -1603,8 +1112,6 @@
                 </a>
 
 
-                <!-- DISCORD -->
-
                 <a
                     href="YOUR-DISCORD-LINK-HERE"
                     target="_blank"
@@ -1630,8 +1137,6 @@
                 </a>
 
 
-                <!-- YOUTUBE -->
-
                 <a
                     href="YOUR-YOUTUBE-LINK-HERE"
                     target="_blank"
@@ -1656,8 +1161,6 @@
 
                 </a>
 
-
-                <!-- GET MODS -->
 
                 <a
                     href="#downloads"
@@ -1723,9 +1226,7 @@
                 <div class="mods-slider">
 
 
-                    <!-- =================================================
-                         METEOR CLIENT
-                    ================================================= -->
+                    <!-- METEOR CLIENT -->
 
                     <div
                         class="mod-card"
@@ -1752,7 +1253,6 @@
                                 Use at your own risk
                             </p>
 
-
                             <a
                                 href="Meteor-Client.jar"
                                 class="download-button"
@@ -1766,9 +1266,7 @@
                     </div>
 
 
-                    <!-- =================================================
-                         GLAZED
-                    ================================================= -->
+                    <!-- GLAZED -->
 
                     <div
                         class="mod-card"
@@ -1795,7 +1293,6 @@
                                 Addon To Meteor Client
                             </p>
 
-
                             <a
                                 href="glazed-1.21.11-n-17.jar"
                                 class="download-button"
@@ -1809,9 +1306,7 @@
                     </div>
 
 
-                    <!-- =================================================
-                         COMING SOON 1
-                    ================================================= -->
+                    <!-- OPSEC -->
 
                     <div
                         class="mod-card"
@@ -1822,7 +1317,7 @@
                         <div class="mod-logo">
 
                             <span>
-                                ?
+                                O
                             </span>
 
                         </div>
@@ -1831,26 +1326,27 @@
                         <div class="mod-info">
 
                             <h3>
-                                Coming Soon
+                                Opsec
                             </h3>
 
                             <p>
-                                A new mod will be available here soon.
+                                The Best Bypasser For Servers
                             </p>
 
-
-                            <div class="coming-soon">
-                                Coming Soon
-                            </div>
+                            <a
+                                href="Opsec.jar"
+                                class="download-button"
+                                download
+                            >
+                                Download
+                            </a>
 
                         </div>
 
                     </div>
 
 
-                    <!-- =================================================
-                         COMING SOON 2
-                    ================================================= -->
+                    <!-- COMING SOON -->
 
                     <div
                         class="mod-card"
@@ -1877,8 +1373,11 @@
                                 A new mod will be available here soon.
                             </p>
 
-
-                            <div class="coming-soon">
+                            <div class="download-button"
+                                 style="
+                                    opacity: 0.45;
+                                    cursor: default;
+                                 ">
                                 Coming Soon
                             </div>
 
@@ -1887,9 +1386,7 @@
                     </div>
 
 
-                    <!-- =================================================
-                         DOTS
-                    ================================================= -->
+                    <!-- DOTS -->
 
                     <div class="slider-controls">
 
@@ -1899,20 +1396,17 @@
                             aria-label="Meteor Client"
                         ></button>
 
-
                         <button
                             class="slider-dot"
                             data-slide="1"
                             aria-label="Glazed"
                         ></button>
 
-
                         <button
                             class="slider-dot"
                             data-slide="2"
-                            aria-label="Coming Soon"
+                            aria-label="Opsec"
                         ></button>
-
 
                         <button
                             class="slider-dot"
@@ -1932,7 +1426,7 @@
 
 
     <!-- =====================================================
-         SPACE
+         SPACE BACKGROUND
     ===================================================== -->
 
     <div id="space">
@@ -1946,32 +1440,30 @@
     </div>
 
 
-    <!-- =====================================================
-         JAVASCRIPT
-    ===================================================== -->
-
     <script>
 
-        const cards = [
-            ...document.querySelectorAll(
-                ".mod-card"
-            )
-        ];
+        /* =====================================================
+           SLIDER
+        ===================================================== */
+
+        const cards =
+            [
+                ...document.querySelectorAll(
+                    ".mod-card"
+                )
+            ];
 
 
-        const dots = [
-            ...document.querySelectorAll(
-                ".slider-dot"
-            )
-        ];
+        const dots =
+            [
+                ...document.querySelectorAll(
+                    ".slider-dot"
+                )
+            ];
 
 
         let activeIndex = 0;
 
-
-        /* =====================================================
-           UPDATE SLIDER
-        ===================================================== */
 
         function updateSlider() {
 
@@ -2008,10 +1500,6 @@
         }
 
 
-        /* =====================================================
-           SELECT CARD
-        ===================================================== */
-
         function selectCard(index) {
 
             activeIndex =
@@ -2021,10 +1509,6 @@
 
         }
 
-
-        /* =====================================================
-           CLICK CARDS
-        ===================================================== */
 
         cards.forEach(
             (card, index) => {
@@ -2052,10 +1536,6 @@
             }
         );
 
-
-        /* =====================================================
-           DOTS
-        ===================================================== */
 
         dots.forEach(
             (dot, index) => {
