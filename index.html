@@ -13,9 +13,7 @@
     <title>VanillaMods</title>
 
 
-    <!-- =========================
-         FONT
-    ========================= -->
+    <!-- FONT -->
 
     <link
         rel="preconnect"
@@ -36,10 +34,6 @@
 
     <style>
 
-        /* =====================================================
-           RESET
-        ===================================================== */
-
         * {
             margin: 0;
             padding: 0;
@@ -53,7 +47,6 @@
 
 
         body {
-            width: 100%;
             min-height: 100vh;
 
             background: #000;
@@ -91,7 +84,6 @@
                 );
 
             backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
 
             border-bottom:
                 1px solid
@@ -123,6 +115,7 @@
             position: absolute;
 
             left: 28px;
+
             top: 50%;
 
             transform:
@@ -140,6 +133,7 @@
 
             transition:
                 transform 0.25s ease,
+
                 filter 0.25s ease;
         }
 
@@ -195,6 +189,7 @@
 
             transition:
                 color 0.25s ease,
+
                 transform 0.25s ease;
         }
 
@@ -256,7 +251,7 @@
         ===================================================== */
 
         .get-mods-nav {
-            display: inline-flex;
+            display: inline-flex !important;
 
             align-items: center;
 
@@ -296,9 +291,10 @@
 
             transition:
                 transform 0.25s ease,
+
                 box-shadow 0.25s ease,
-                border-color 0.25s ease,
-                background 0.25s ease;
+
+                border-color 0.25s ease;
         }
 
 
@@ -314,13 +310,6 @@
 
             border-color:
                 rgba(225, 170, 255, 1);
-
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(105, 30, 160, 0.9),
-                    rgba(45, 12, 75, 0.95)
-                );
 
             box-shadow:
                 0 0 18px
@@ -343,8 +332,6 @@
 
 
         .page-section {
-            position: relative;
-
             width: 100%;
 
             min-height: 100vh;
@@ -366,23 +353,8 @@
            HOME
         ===================================================== */
 
-        #home {
-            min-height: 100vh;
-        }
-
-
         .hero-content {
-            position: relative;
-
-            z-index: 10;
-
             max-width: 900px;
-
-            animation:
-                heroFadeIn
-                1.2s
-                ease
-                forwards;
         }
 
 
@@ -399,23 +371,8 @@
 
             letter-spacing: 4px;
 
-            color: white;
-
-            text-shadow:
-                0 0 10px
-                rgba(190, 100, 255, 0.9),
-
-                0 0 25px
-                rgba(150, 50, 255, 0.75),
-
-                0 0 60px
-                rgba(110, 30, 220, 0.5);
-
             margin-bottom: 18px;
-        }
 
-
-        .hero-title span {
             background:
                 linear-gradient(
                     90deg,
@@ -429,6 +386,7 @@
                 250% auto;
 
             -webkit-background-clip: text;
+
             background-clip: text;
 
             -webkit-text-fill-color:
@@ -451,40 +409,35 @@
             font-size:
                 clamp(14px, 2vw, 21px);
 
-            font-weight: 500;
-
             letter-spacing: 2px;
 
             color:
                 rgba(235, 220, 250, 0.78);
-
-            text-shadow:
-                0 0 12px
-                rgba(170, 80, 255, 0.45);
         }
 
 
         /* =====================================================
-           DOWNLOAD SECTION
+           DOWNLOADS
         ===================================================== */
 
         #downloads {
-            min-height: 100vh;
+            align-items:
+                flex-start;
 
-            align-items: flex-start;
+            padding-top:
+                130px;
 
-            padding-top: 130px;
-
-            padding-bottom: 120px;
+            padding-bottom:
+                100px;
         }
 
 
         .downloads-container {
             width: 100%;
 
-            max-width: 950px;
+            max-width: 1200px;
 
-            margin: 0 auto;
+            margin: auto;
         }
 
 
@@ -516,6 +469,7 @@
                 250% auto;
 
             -webkit-background-clip: text;
+
             background-clip: text;
 
             -webkit-text-fill-color:
@@ -542,12 +496,12 @@
 
             letter-spacing: 1px;
 
-            margin-bottom: 55px;
+            margin-bottom: 45px;
         }
 
 
         /* =====================================================
-           SLIDER AREA
+           CARD CAROUSEL
         ===================================================== */
 
         .mods-slider {
@@ -555,25 +509,28 @@
 
             width: 100%;
 
-            height: 560px;
+            height: 500px;
 
             display: flex;
 
             align-items: center;
 
             justify-content: center;
+
+            overflow: visible;
         }
 
 
         /* =====================================================
-           MOD CARD
+           CARDS
         ===================================================== */
 
         .mod-card {
             position: absolute;
 
-            width: 350px;
-            height: 450px;
+            width: 330px;
+
+            height: 425px;
 
             border-radius: 22px;
 
@@ -594,21 +551,13 @@
             -webkit-backdrop-filter:
                 blur(15px);
 
-            box-shadow:
-                0 15px 45px
-                rgba(0, 0, 0, 0.5),
-
-                inset 0 0 30px
-                rgba(130, 50, 220, 0.05);
-
             overflow: hidden;
 
             cursor: pointer;
 
-            user-select: none;
-
             transition:
-                transform 0.55s cubic-bezier(
+                transform 0.55s
+                cubic-bezier(
                     0.22,
                     1,
                     0.36,
@@ -624,77 +573,104 @@
 
 
         /* =====================================================
-           CARD POSITIONS
+           MAIN CARD
         ===================================================== */
 
         .mod-card[data-position="0"] {
+
             transform:
                 translateX(0)
-                translateY(0)
                 scale(1);
 
-            z-index: 40;
+            z-index: 50;
 
             opacity: 1;
 
             filter: none;
 
             box-shadow:
+
                 0 25px 70px
-                rgba(0, 0, 0, 0.6),
+                rgba(0, 0, 0, 0.65),
 
-                0 0 35px
-                rgba(145, 50, 255, 0.18);
-        }
-
-
-        .mod-card[data-position="1"] {
-            transform:
-                translateX(55px)
-                translateY(12px)
-                scale(0.94);
-
-            z-index: 30;
-
-            opacity: 0.82;
-
-            filter:
-                brightness(0.72);
-        }
-
-
-        .mod-card[data-position="2"] {
-            transform:
-                translateX(105px)
-                translateY(24px)
-                scale(0.88);
-
-            z-index: 20;
-
-            opacity: 0.58;
-
-            filter:
-                brightness(0.52);
-        }
-
-
-        .mod-card[data-position="3"] {
-            transform:
-                translateX(150px)
-                translateY(36px)
-                scale(0.82);
-
-            z-index: 10;
-
-            opacity: 0.35;
-
-            filter:
-                brightness(0.35);
+                0 0 40px
+                rgba(145, 50, 255, 0.25);
         }
 
 
         /* =====================================================
-           CARD TOP LOGO SECTION
+           RIGHT CARD
+        ===================================================== */
+
+        .mod-card[data-position="1"] {
+
+            transform:
+                translateX(390px)
+                scale(0.78);
+
+            z-index: 30;
+
+            opacity: 0.72;
+
+            filter:
+                brightness(0.65);
+        }
+
+
+        /* =====================================================
+           FAR RIGHT CARD
+        ===================================================== */
+
+        .mod-card[data-position="2"] {
+
+            transform:
+                translateX(700px)
+                scale(0.62);
+
+            z-index: 20;
+
+            opacity: 0.42;
+
+            filter:
+                brightness(0.42);
+        }
+
+
+        /* =====================================================
+           LEFT CARD
+        ===================================================== */
+
+        .mod-card[data-position="3"] {
+
+            transform:
+                translateX(-390px)
+                scale(0.78);
+
+            z-index: 30;
+
+            opacity: 0.72;
+
+            filter:
+                brightness(0.65);
+        }
+
+
+        /* =====================================================
+           CARD HOVER
+        ===================================================== */
+
+        .mod-card[data-position="1"]:hover,
+        .mod-card[data-position="3"]:hover {
+
+            opacity: 0.95;
+
+            filter:
+                brightness(0.9);
+        }
+
+
+        /* =====================================================
+           CARD LOGO
         ===================================================== */
 
         .mod-logo {
@@ -743,8 +719,6 @@
 
             font-weight: 800;
 
-            line-height: 1;
-
             color: white;
 
             text-shadow:
@@ -760,7 +734,7 @@
 
 
         /* =====================================================
-           CARD INFORMATION
+           CARD INFO
         ===================================================== */
 
         .mod-info {
@@ -783,8 +757,6 @@
             align-items: center;
 
             justify-content: center;
-
-            text-align: center;
         }
 
 
@@ -795,12 +767,6 @@
                 sans-serif;
 
             font-size: 22px;
-
-            font-weight: 700;
-
-            letter-spacing: 0.5px;
-
-            color: white;
 
             margin-bottom: 10px;
         }
@@ -833,7 +799,8 @@
 
             height: 42px;
 
-            padding: 0 22px;
+            padding:
+                0 22px;
 
             border-radius: 10px;
 
@@ -856,31 +823,16 @@
 
             text-decoration: none;
 
-            box-shadow:
-                0 0 12px
-                rgba(150, 60, 255, 0.25);
-
             transition:
                 transform 0.25s ease,
-                box-shadow 0.25s ease,
-                border-color 0.25s ease,
-                background 0.25s ease;
+
+                box-shadow 0.25s ease;
         }
 
 
         .download-button:hover {
             transform:
                 translateY(-2px);
-
-            border-color:
-                rgba(225, 170, 255, 1);
-
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(110, 30, 165, 0.95),
-                    rgba(50, 12, 80, 1)
-                );
 
             box-shadow:
                 0 0 18px
@@ -892,7 +844,7 @@
 
 
         /* =====================================================
-           SLIDER CONTROLS
+           DOTS
         ===================================================== */
 
         .slider-controls {
@@ -907,8 +859,6 @@
 
             display: flex;
 
-            align-items: center;
-
             gap: 9px;
 
             z-index: 100;
@@ -919,9 +869,9 @@
             width: 8px;
             height: 8px;
 
-            border-radius: 50%;
-
             border: none;
+
+            border-radius: 50%;
 
             background:
                 rgba(190, 130, 230, 0.28);
@@ -930,8 +880,8 @@
 
             transition:
                 width 0.25s ease,
-                background 0.25s ease,
-                box-shadow 0.25s ease;
+
+                background 0.25s ease;
         }
 
 
@@ -993,28 +943,17 @@
                     transparent 45%
                 ),
 
-                radial-gradient(
-                    ellipse at 62% 15%,
-                    rgba(150, 40, 255, 0.13),
-                    transparent 35%
-                ),
-
                 #000;
         }
 
-
-        /* =====================================================
-           PURPLE CLOUDS
-        ===================================================== */
 
         .purple-cloud {
             position: absolute;
 
             border-radius: 50%;
 
-            pointer-events: none;
-
-            filter: blur(70px);
+            filter:
+                blur(70px);
 
             opacity: 0.35;
         }
@@ -1062,21 +1001,6 @@
         }
 
 
-        .cloud4 {
-            width: 300px;
-            height: 150px;
-
-            left: 58%;
-            top: 8%;
-
-            background:
-                rgba(140, 20, 255, 0.20);
-
-            transform:
-                rotate(-15deg);
-        }
-
-
         /* =====================================================
            STARS
         ===================================================== */
@@ -1121,6 +1045,7 @@
 
             box-shadow:
                 0 0 8px white,
+
                 0 0 15px
                 rgba(190, 120, 255, 0.65);
         }
@@ -1153,172 +1078,10 @@
 
 
         /* =====================================================
-           MOVING STARS
-        ===================================================== */
-
-        .moving-star {
-            position: absolute;
-
-            width: 3px;
-            height: 3px;
-
-            background: white;
-
-            border-radius: 50%;
-
-            box-shadow:
-                0 0 8px white,
-                0 0 16px
-                rgba(180, 90, 255, 0.85);
-
-            animation:
-                moveStar
-                var(--move-time)
-                linear
-                forwards;
-        }
-
-
-        @keyframes moveStar {
-
-            from {
-                transform:
-                    translate(0, 0);
-
-                opacity: 0;
-            }
-
-            10% {
-                opacity: 1;
-            }
-
-            80% {
-                opacity: 1;
-            }
-
-            to {
-                transform:
-                    translate(
-                        var(--move-x),
-                        var(--move-y)
-                    );
-
-                opacity: 0;
-            }
-        }
-
-
-        /* =====================================================
-           SHOOTING STARS
-        ===================================================== */
-
-        .shooting-star {
-            position: absolute;
-
-            width: 130px;
-            height: 2px;
-
-            background:
-                linear-gradient(
-                    to right,
-                    transparent,
-                    rgba(170, 70, 255, 0.45),
-                    white
-                );
-
-            border-radius: 50%;
-
-            box-shadow:
-                0 0 8px white,
-                0 0 18px
-                rgba(170, 70, 255, 0.9);
-
-            transform:
-                rotate(35deg);
-
-            animation:
-                shooting
-                1.2s
-                linear
-                forwards;
-        }
-
-
-        @keyframes shooting {
-
-            from {
-                transform:
-                    translate(0, 0)
-                    rotate(35deg);
-
-                opacity: 0;
-            }
-
-            15% {
-                opacity: 1;
-            }
-
-            to {
-                transform:
-                    translate(500px, 350px)
-                    rotate(35deg);
-
-                opacity: 0;
-            }
-        }
-
-
-        /* =====================================================
-           HERO ANIMATION
-        ===================================================== */
-
-        @keyframes heroFadeIn {
-
-            from {
-                opacity: 0;
-
-                transform:
-                    translateY(25px);
-            }
-
-            to {
-                opacity: 1;
-
-                transform:
-                    translateY(0);
-            }
-        }
-
-
-        @keyframes titleGlow {
-
-            0% {
-                background-position:
-                    0% center;
-            }
-
-            50% {
-                background-position:
-                    100% center;
-            }
-
-            100% {
-                background-position:
-                    0% center;
-            }
-        }
-
-
-        /* =====================================================
            MOBILE
         ===================================================== */
 
-        @media (max-width: 700px) {
-
-            .navbar {
-                height: 58px;
-            }
-
+        @media (max-width: 800px) {
 
             .nav-inner {
                 padding: 0 10px;
@@ -1355,48 +1118,50 @@
 
 
             .get-mods-nav {
-                height: 40px;
-
                 min-width: 95px;
 
-                padding: 0 12px;
+                height: 40px;
 
-                font-size: 11px !important;
+                padding:
+                    0 12px;
+
+                font-size:
+                    11px !important;
             }
 
 
             .mods-slider {
-                height: 540px;
+                height: 480px;
+
+                overflow: hidden;
             }
 
 
             .mod-card {
                 width: 285px;
+
                 height: 410px;
             }
 
 
             .mod-card[data-position="1"] {
                 transform:
-                    translateX(35px)
-                    translateY(10px)
-                    scale(0.94);
+                    translateX(180px)
+                    scale(0.70);
             }
 
 
             .mod-card[data-position="2"] {
                 transform:
-                    translateX(65px)
-                    translateY(20px)
-                    scale(0.88);
+                    translateX(300px)
+                    scale(0.55);
             }
 
 
             .mod-card[data-position="3"] {
                 transform:
-                    translateX(90px)
-                    translateY(30px)
-                    scale(0.82);
+                    translateX(-180px)
+                    scale(0.70);
             }
 
 
@@ -1404,25 +1169,7 @@
                 font-size: 65px;
             }
 
-
-            .mod-info h3 {
-                font-size: 19px;
-            }
-
-
-            .hero-title {
-                letter-spacing: 2px;
-            }
-
-
-            .hero-subtitle {
-                letter-spacing: 1px;
-
-                line-height: 1.6;
-            }
-
         }
-
 
     </style>
 
@@ -1441,8 +1188,6 @@
         <div class="nav-inner">
 
 
-            <!-- LOGO -->
-
             <a
                 href="#home"
                 class="site-logo-link"
@@ -1456,8 +1201,6 @@
 
             </a>
 
-
-            <!-- LINKS -->
 
             <nav class="nav-links">
 
@@ -1593,6 +1336,7 @@
                     Get Mods
                 </a>
 
+
             </nav>
 
         </div>
@@ -1607,9 +1351,7 @@
     <main>
 
 
-        <!-- =================================================
-             HOME
-        ================================================= -->
+        <!-- HOME -->
 
         <section
             id="home"
@@ -1619,11 +1361,7 @@
             <div class="hero-content">
 
                 <h1 class="hero-title">
-
-                    <span>
-                        VanillaMods
-                    </span>
-
+                    VanillaMods
                 </h1>
 
 
@@ -1636,17 +1374,16 @@
         </section>
 
 
-        <!-- =================================================
-             DOWNLOADS
-        ================================================= -->
+        <!-- DOWNLOADS -->
 
         <section
             id="downloads"
             class="page-section"
         >
 
-            <div class="downloads-container">
-
+            <div
+                class="downloads-container"
+            >
 
                 <h2 class="downloads-title">
                     Downloads
@@ -1659,15 +1396,13 @@
 
 
                 <!-- =================================================
-                     SLIDER
+                     MOD CAROUSEL
                 ================================================= -->
 
                 <div class="mods-slider">
 
 
-                    <!-- =========================
-                         METEOR CLIENT
-                    ========================= -->
+                    <!-- METEOR -->
 
                     <div
                         class="mod-card"
@@ -1709,9 +1444,7 @@
                     </div>
 
 
-                    <!-- =========================
-                         MOD 2
-                    ========================= -->
+                    <!-- MOD 2 -->
 
                     <div
                         class="mod-card"
@@ -1753,9 +1486,7 @@
                     </div>
 
 
-                    <!-- =========================
-                         MOD 3
-                    ========================= -->
+                    <!-- MOD 3 -->
 
                     <div
                         class="mod-card"
@@ -1797,9 +1528,7 @@
                     </div>
 
 
-                    <!-- =========================
-                         MOD 4
-                    ========================= -->
+                    <!-- MOD 4 -->
 
                     <div
                         class="mod-card"
@@ -1841,41 +1570,31 @@
                     </div>
 
 
-                    <!-- =================================================
-                         DOTS
-                    ================================================= -->
+                    <!-- DOTS -->
 
                     <div class="slider-controls">
 
                         <button
                             class="slider-dot active"
                             data-slide="0"
-                            aria-label="Meteor Client"
                         ></button>
-
 
                         <button
                             class="slider-dot"
                             data-slide="1"
-                            aria-label="VanillaMod"
                         ></button>
-
 
                         <button
                             class="slider-dot"
                             data-slide="2"
-                            aria-label="Cosmic Mod"
                         ></button>
-
 
                         <button
                             class="slider-dot"
                             data-slide="3"
-                            aria-label="X Mod"
                         ></button>
 
                     </div>
-
 
                 </div>
 
@@ -1887,7 +1606,7 @@
 
 
     <!-- =====================================================
-         COSMIC BACKGROUND
+         SPACE BACKGROUND
     ===================================================== -->
 
     <div id="space">
@@ -1897,8 +1616,6 @@
         <div class="purple-cloud cloud2"></div>
 
         <div class="purple-cloud cloud3"></div>
-
-        <div class="purple-cloud cloud4"></div>
 
     </div>
 
@@ -1910,35 +1627,35 @@
     <script>
 
 
-        /* =====================================================
-           MOD SLIDER
-        ===================================================== */
-
         const cards =
-            Array.from(
-                document.querySelectorAll(
+            [
+                ...document.querySelectorAll(
                     ".mod-card"
                 )
-            );
+            ];
 
 
         const dots =
-            Array.from(
-                document.querySelectorAll(
+            [
+                ...document.querySelectorAll(
                     ".slider-dot"
                 )
-            );
+            ];
 
 
         let activeIndex = 0;
 
+
+        /* =====================================================
+           UPDATE CARDS
+        ===================================================== */
 
         function updateSlider() {
 
             cards.forEach(
                 (card, index) => {
 
-                    let position =
+                    const position =
                         (
                             index -
                             activeIndex +
@@ -1968,7 +1685,11 @@
         }
 
 
-        function bringToFront(index) {
+        /* =====================================================
+           SELECT CARD
+        ===================================================== */
+
+        function selectCard(index) {
 
             activeIndex =
                 index;
@@ -1978,18 +1699,16 @@
         }
 
 
+        /* =====================================================
+           CARD CLICK
+        ===================================================== */
+
         cards.forEach(
             (card, index) => {
 
                 card.addEventListener(
                     "click",
-                    (event) => {
-
-                        /*
-                         * Don't change the card
-                         * when the download button
-                         * itself is clicked.
-                         */
+                    function(event) {
 
                         if (
                             event.target.closest(
@@ -2000,7 +1719,7 @@
                         }
 
 
-                        bringToFront(index);
+                        selectCard(index);
 
                     }
                 );
@@ -2008,15 +1727,19 @@
             }
         );
 
+
+        /* =====================================================
+           DOT CLICK
+        ===================================================== */
 
         dots.forEach(
             (dot, index) => {
 
                 dot.addEventListener(
                     "click",
-                    () => {
+                    function() {
 
-                        bringToFront(index);
+                        selectCard(index);
 
                     }
                 );
@@ -2026,14 +1749,14 @@
 
 
         /* =====================================================
-           INITIAL SLIDER
+           INITIALIZE
         ===================================================== */
 
         updateSlider();
 
 
         /* =====================================================
-           SPACE BACKGROUND
+           STAR FIELD
         ===================================================== */
 
         const space =
@@ -2041,10 +1764,6 @@
                 "space"
             );
 
-
-        /* =====================================================
-           NORMAL STARS
-        ===================================================== */
 
         const starCount = 320;
 
@@ -2131,197 +1850,6 @@
             );
 
         }
-
-
-        /* =====================================================
-           MOVING STARS
-        ===================================================== */
-
-        function createMovingStar() {
-
-            const star =
-                document.createElement(
-                    "div"
-                );
-
-
-            star.classList.add(
-                "moving-star"
-            );
-
-
-            let startX;
-            let startY;
-
-
-            if (
-                Math.random() < 0.5
-            ) {
-
-                startX =
-                    Math.random() *
-                    100;
-
-                startY = -2;
-
-            }
-
-            else {
-
-                startX = -2;
-
-                startY =
-                    Math.random() *
-                    100;
-
-            }
-
-
-            star.style.left =
-                startX +
-                "%";
-
-
-            star.style.top =
-                startY +
-                "%";
-
-
-            const moveX =
-                100 +
-                Math.random() *
-                550;
-
-
-            const moveY =
-                -150 +
-                Math.random() *
-                700;
-
-
-            star.style.setProperty(
-                "--move-x",
-                moveX +
-                "px"
-            );
-
-
-            star.style.setProperty(
-                "--move-y",
-                moveY +
-                "px"
-            );
-
-
-            star.style.setProperty(
-                "--move-time",
-                3 +
-                Math.random() *
-                5 +
-                "s"
-            );
-
-
-            space.appendChild(
-                star
-            );
-
-
-            setTimeout(
-                () => {
-
-                    star.remove();
-
-                },
-                9000
-            );
-
-        }
-
-
-        setInterval(
-            () => {
-
-                if (
-                    Math.random() <
-                    0.8
-                ) {
-
-                    createMovingStar();
-
-                }
-
-            },
-            1000
-        );
-
-
-        /* =====================================================
-           SHOOTING STARS
-        ===================================================== */
-
-        function createShootingStar() {
-
-            const star =
-                document.createElement(
-                    "div"
-                );
-
-
-            star.classList.add(
-                "shooting-star"
-            );
-
-
-            star.style.left =
-                Math.random() *
-                55 +
-                "%";
-
-
-            star.style.top =
-                Math.random() *
-                35 +
-                "%";
-
-
-            space.appendChild(
-                star
-            );
-
-
-            setTimeout(
-                () => {
-
-                    star.remove();
-
-                },
-                1300
-            );
-
-        }
-
-
-        function randomShootingStar() {
-
-            createShootingStar();
-
-
-            const next =
-                3000 +
-                Math.random() *
-                5000;
-
-
-            setTimeout(
-                randomShootingStar,
-                next
-            );
-
-        }
-
-
-        randomShootingStar();
 
 
     </script>
