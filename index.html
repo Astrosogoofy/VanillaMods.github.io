@@ -9,10 +9,6 @@
 
     <style>
 
-        /* =========================
-           BASIC PAGE
-        ========================= */
-
         * {
             margin: 0;
             padding: 0;
@@ -24,20 +20,17 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
-
             background: #000;
-
             font-family: Arial, sans-serif;
         }
 
 
         /* =========================
-           TOP NAVIGATION BAR
+           TOP NAVIGATION
         ========================= */
 
         .navbar {
             position: fixed;
-
             top: 0;
             left: 0;
 
@@ -75,7 +68,6 @@
             padding: 0 24px;
 
             display: flex;
-
             align-items: center;
             justify-content: center;
         }
@@ -116,23 +108,13 @@
         }
 
 
-        /* =========================
-           NAVIGATION ICONS
-        ========================= */
+        .nav-links a:hover {
+            color: white;
 
-        .icon {
-            width: 19px;
-            height: 19px;
-
-            flex-shrink: 0;
-
-            color: currentColor;
+            transform:
+                translateY(-1px);
         }
 
-
-        /* =========================
-           PURPLE UNDERLINE
-        ========================= */
 
         .nav-links a::after {
             content: "";
@@ -155,18 +137,11 @@
                 );
 
             box-shadow:
-                0 0 8px rgba(170, 80, 255, 0.6);
+                0 0 8px
+                rgba(170, 80, 255, 0.6);
 
             transition:
                 width 0.25s ease;
-        }
-
-
-        .nav-links a:hover {
-            color: #fff;
-
-            transform:
-                translateY(-1px);
         }
 
 
@@ -175,13 +150,20 @@
         }
 
 
+        .icon {
+            width: 19px;
+            height: 19px;
+            flex-shrink: 0;
+            color: currentColor;
+        }
+
+
         /* =========================
-           SPACE
+           SPACE BACKGROUND
         ========================= */
 
         #space {
             position: fixed;
-
             inset: 0;
 
             width: 100%;
@@ -191,16 +173,12 @@
 
             background:
 
-                /* Purple patch - top left */
-
                 radial-gradient(
                     ellipse at 12% 22%,
                     rgba(115, 0, 220, 0.24),
                     rgba(70, 0, 130, 0.10) 20%,
                     transparent 45%
                 ),
-
-                /* Purple patch - right */
 
                 radial-gradient(
                     ellipse at 88% 58%,
@@ -209,15 +187,11 @@
                     transparent 48%
                 ),
 
-                /* Purple patch - bottom */
-
                 radial-gradient(
                     ellipse at 45% 105%,
                     rgba(100, 0, 220, 0.20),
                     transparent 45%
                 ),
-
-                /* Small purple patch */
 
                 radial-gradient(
                     ellipse at 62% 15%,
@@ -300,6 +274,167 @@
 
             transform:
                 rotate(-15deg);
+        }
+
+
+        /* =========================
+           GET MODS BUTTON
+        ========================= */
+
+        .get-mods-container {
+            position: fixed;
+
+            top: 50%;
+            left: 50%;
+
+            transform:
+                translate(-50%, -50%);
+
+            z-index: 500;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .get-mods {
+            position: relative;
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-width: 210px;
+            height: 60px;
+
+            padding: 0 32px;
+
+            border-radius: 16px;
+
+            border:
+                1px solid
+                rgba(190, 100, 255, 0.8);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(75, 20, 115, 0.75),
+                    rgba(35, 10, 60, 0.85)
+                );
+
+            color: white;
+
+            font-size: 18px;
+            font-weight: 600;
+
+            letter-spacing: 0.5px;
+
+            text-decoration: none;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 0 15px
+                rgba(150, 60, 255, 0.35),
+
+                0 0 40px
+                rgba(120, 40, 220, 0.18),
+
+                inset 0 0 20px
+                rgba(150, 60, 255, 0.08);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease,
+                background 0.25s ease;
+        }
+
+
+        /* Glow surrounding the button */
+
+        .get-mods::before {
+            content: "";
+
+            position: absolute;
+
+            inset: -10px;
+
+            border-radius: 22px;
+
+            background:
+                rgba(145, 60, 255, 0.12);
+
+            filter: blur(18px);
+
+            z-index: -1;
+
+            opacity: 0.8;
+
+            transition:
+                opacity 0.25s ease,
+                transform 0.25s ease;
+        }
+
+
+        /* Hover */
+
+        .get-mods:hover {
+
+            transform:
+                translateY(-4px)
+                scale(1.03);
+
+            border-color:
+                rgba(220, 160, 255, 1);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(100, 30, 155, 0.85),
+                    rgba(45, 12, 75, 0.92)
+                );
+
+            box-shadow:
+
+                0 0 20px
+                rgba(175, 80, 255, 0.7),
+
+                0 0 55px
+                rgba(145, 50, 255, 0.45),
+
+                0 0 100px
+                rgba(120, 40, 220, 0.2),
+
+                inset 0 0 25px
+                rgba(190, 100, 255, 0.15);
+        }
+
+
+        .get-mods:hover::before {
+
+            opacity: 1;
+
+            transform:
+                scale(1.12);
+        }
+
+
+        /* Click effect */
+
+        .get-mods:active {
+
+            transform:
+                translateY(-1px)
+                scale(0.97);
+
+            box-shadow:
+
+                0 0 35px
+                rgba(190, 90, 255, 0.9);
         }
 
 
@@ -412,6 +547,7 @@
         @keyframes moveStar {
 
             from {
+
                 transform:
                     translate(0, 0);
 
@@ -427,6 +563,7 @@
             }
 
             to {
+
                 transform:
                     translate(
                         var(--move-x),
@@ -477,6 +614,7 @@
         @keyframes shooting {
 
             from {
+
                 transform:
                     translate(0, 0)
                     rotate(35deg);
@@ -489,6 +627,7 @@
             }
 
             to {
+
                 transform:
                     translate(500px, 350px)
                     rotate(35deg);
@@ -522,7 +661,6 @@
 
             .nav-links a {
                 font-size: 12px;
-
                 gap: 5px;
             }
 
@@ -530,6 +668,14 @@
             .icon {
                 width: 16px;
                 height: 16px;
+            }
+
+
+            .get-mods {
+                min-width: 180px;
+                height: 54px;
+
+                font-size: 16px;
             }
         }
 
@@ -541,7 +687,7 @@
 
 
     <!-- =========================
-         NAVIGATION
+         TOP NAVIGATION
     ========================= -->
 
     <header class="navbar">
@@ -559,7 +705,6 @@
                         class="icon"
                         viewBox="0 0 24 24"
                         fill="none"
-                        aria-hidden="true"
                     >
 
                         <path
@@ -585,7 +730,6 @@
                         class="icon"
                         viewBox="0 0 24 24"
                         fill="none"
-                        aria-hidden="true"
                     >
 
                         <path
@@ -620,7 +764,7 @@
                 <!-- DISCORD -->
 
                 <a
-                    href="https://discord.gg/HPXxhdZ9Pz"
+                    href="YOUR-DISCORD-LINK-HERE"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -628,7 +772,6 @@
                     <svg
                         class="icon"
                         viewBox="0 0 24 24"
-                        aria-hidden="true"
                     >
 
                         <path
@@ -646,7 +789,7 @@
                 <!-- YOUTUBE -->
 
                 <a
-                    href="https://www.youtube.com/@Archwierrrrrr"
+                    href="YOUR-YOUTUBE-LINK-HERE"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -654,7 +797,6 @@
                     <svg
                         class="icon"
                         viewBox="0 0 24 24"
-                        aria-hidden="true"
                     >
 
                         <path
@@ -668,7 +810,6 @@
 
                 </a>
 
-
             </nav>
 
         </div>
@@ -677,7 +818,23 @@
 
 
     <!-- =========================
-         SPACE
+         GET MODS BUTTON
+    ========================= -->
+
+    <div class="get-mods-container">
+
+        <a
+            href="#downloads"
+            class="get-mods"
+        >
+            Get Mods
+        </a>
+
+    </div>
+
+
+    <!-- =========================
+         SPACE BACKGROUND
     ========================= -->
 
     <div id="space">
@@ -695,13 +852,14 @@
 
     <script>
 
+
+        /* =========================
+           STAR SYSTEM
+        ========================= */
+
         const space =
             document.getElementById("space");
 
-
-        /* =========================
-           NORMAL STARS
-        ========================= */
 
         const starCount = 320;
 
@@ -796,10 +954,7 @@
             let startY;
 
 
-            /*
-             * Start from either
-             * the top or left.
-             */
+            /* Start from top or left */
 
             if (Math.random() < 0.5) {
 
@@ -828,9 +983,7 @@
                 startY + "%";
 
 
-            /*
-             * Random movement
-             */
+            /* Random destination */
 
             const moveX =
                 100 +
@@ -876,7 +1029,7 @@
         }
 
 
-        /* Random moving stars */
+        /* Create moving stars */
 
         setInterval(() => {
 
@@ -906,11 +1059,6 @@
             );
 
 
-            /*
-             * Mostly appear
-             * in the upper half.
-             */
-
             star.style.left =
                 Math.random() * 55 +
                 "%";
@@ -933,8 +1081,6 @@
         }
 
 
-        /* Random shooting stars */
-
         function randomShootingStar() {
 
             createShootingStar();
@@ -954,6 +1100,7 @@
 
 
         randomShootingStar();
+
 
     </script>
 
