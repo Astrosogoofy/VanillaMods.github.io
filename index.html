@@ -53,10 +53,8 @@
             position: fixed;
             top: 0;
             left: 0;
-
             width: 100%;
             height: 64px;
-
             z-index: 1000;
 
             background:
@@ -79,7 +77,6 @@
         .nav-inner {
             width: 100%;
             height: 100%;
-
             padding: 0 28px;
 
             display: flex;
@@ -92,17 +89,14 @@
 
         .site-logo-link {
             position: absolute;
-
             left: 28px;
             top: 50%;
-
             transform: translateY(-50%);
         }
 
         .site-logo {
             width: 44px;
             height: 44px;
-
             object-fit: contain;
             display: block;
 
@@ -160,9 +154,7 @@
 
         .nav-links a:hover {
             color: white;
-
-            transform:
-                translateY(-1px);
+            transform: translateY(-1px);
         }
 
         .nav-links a::after {
@@ -200,9 +192,7 @@
         .icon {
             width: 19px;
             height: 19px;
-
             flex-shrink: 0;
-
             color: currentColor;
         }
 
@@ -448,7 +438,7 @@
             position: relative;
 
             width: 100%;
-            height: 500px;
+            height: 540px;
 
             display: flex;
 
@@ -507,19 +497,15 @@
         ===================================================== */
 
         .mod-card[data-position="0"] {
-
             transform:
                 translateX(0)
                 scale(1);
 
             z-index: 50;
-
             opacity: 1;
-
             filter: none;
 
             box-shadow:
-
                 0 25px 70px
                 rgba(0, 0, 0, 0.65),
 
@@ -528,13 +514,11 @@
         }
 
         .mod-card[data-position="1"] {
-
             transform:
                 translateX(390px)
                 scale(0.78);
 
             z-index: 30;
-
             opacity: 0.72;
 
             filter:
@@ -542,13 +526,11 @@
         }
 
         .mod-card[data-position="2"] {
-
             transform:
                 translateX(700px)
                 scale(0.62);
 
             z-index: 20;
-
             opacity: 0.42;
 
             filter:
@@ -556,22 +538,31 @@
         }
 
         .mod-card[data-position="3"] {
-
             transform:
                 translateX(-390px)
                 scale(0.78);
 
             z-index: 30;
-
             opacity: 0.72;
 
             filter:
                 brightness(0.65);
         }
 
+        .mod-card[data-position="4"] {
+            transform:
+                translateX(-700px)
+                scale(0.62);
+
+            z-index: 20;
+            opacity: 0.42;
+
+            filter:
+                brightness(0.42);
+        }
+
         .mod-card[data-position="1"]:hover,
         .mod-card[data-position="3"]:hover {
-
             opacity: 0.95;
 
             filter:
@@ -583,7 +574,6 @@
         ===================================================== */
 
         .mod-logo {
-
             position: absolute;
 
             top: 0;
@@ -617,7 +607,6 @@
         }
 
         .mod-logo span {
-
             font-family:
                 "Orbitron",
                 Arial,
@@ -630,7 +619,6 @@
             color: white;
 
             text-shadow:
-
                 0 0 10px
                 rgba(210, 150, 255, 1),
 
@@ -646,7 +634,6 @@
         ===================================================== */
 
         .mod-info {
-
             position: absolute;
 
             left: 0;
@@ -667,7 +654,6 @@
         }
 
         .mod-info h3 {
-
             font-family:
                 "Orbitron",
                 Arial,
@@ -679,7 +665,6 @@
         }
 
         .mod-info p {
-
             font-size: 14px;
 
             line-height: 1.6;
@@ -695,7 +680,6 @@
         ===================================================== */
 
         .download-button {
-
             display: inline-flex;
 
             align-items: center;
@@ -735,12 +719,10 @@
         }
 
         .download-button:hover {
-
             transform:
                 translateY(-2px);
 
             box-shadow:
-
                 0 0 18px
                 rgba(175, 80, 255, 0.65),
 
@@ -749,11 +731,65 @@
         }
 
         /* =====================================================
+           SLIDER DOTS
+        ===================================================== */
+
+        .slider-controls {
+            position: absolute;
+
+            bottom: 0;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            display: flex;
+            align-items: center;
+
+            gap: 9px;
+
+            z-index: 100;
+        }
+
+        .slider-dot {
+            width: 9px;
+            height: 9px;
+
+            padding: 0;
+
+            border: none;
+            border-radius: 50%;
+
+            background:
+                rgba(200, 160, 230, 0.35);
+
+            cursor: pointer;
+
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .slider-dot:hover {
+            transform: scale(1.25);
+        }
+
+        .slider-dot.active {
+            transform: scale(1.3);
+
+            background:
+                #b66cff;
+
+            box-shadow:
+                0 0 10px
+                rgba(180, 90, 255, 0.85);
+        }
+
+        /* =====================================================
            SPACE BACKGROUND
         ===================================================== */
 
         #space {
-
             position: fixed;
 
             inset: 0;
@@ -768,7 +804,6 @@
             pointer-events: none;
 
             background:
-
                 radial-gradient(
                     ellipse at 12% 22%,
                     rgba(115, 0, 220, 0.24),
@@ -793,7 +828,6 @@
         }
 
         .purple-cloud {
-
             position: absolute;
 
             border-radius: 50%;
@@ -804,7 +838,6 @@
         }
 
         .cloud1 {
-
             width: 420px;
             height: 200px;
 
@@ -819,7 +852,6 @@
         }
 
         .cloud2 {
-
             width: 500px;
             height: 220px;
 
@@ -834,7 +866,6 @@
         }
 
         .cloud3 {
-
             width: 400px;
             height: 180px;
 
@@ -850,7 +881,6 @@
         ===================================================== */
 
         .star {
-
             position: absolute;
 
             width: 2px;
@@ -875,7 +905,6 @@
         }
 
         .star.small {
-
             width: 1px;
             height: 1px;
 
@@ -884,12 +913,10 @@
         }
 
         .star.big {
-
             width: 3px;
             height: 3px;
 
             box-shadow:
-
                 0 0 8px white,
 
                 0 0 15px
@@ -897,9 +924,7 @@
         }
 
         @keyframes twinkle {
-
             0% {
-
                 opacity: 0.02;
 
                 transform:
@@ -907,7 +932,6 @@
             }
 
             50% {
-
                 opacity:
                     var(--opacity);
 
@@ -916,7 +940,6 @@
             }
 
             100% {
-
                 opacity: 0.02;
 
                 transform:
@@ -939,33 +962,26 @@
             }
 
             .site-logo {
-
                 width: 38px;
                 height: 38px;
             }
 
             .nav-links {
-
                 gap: 10px;
             }
 
             .nav-links a {
-
                 font-size: 10px;
-
                 gap: 4px;
             }
 
             .icon {
-
                 width: 15px;
                 height: 15px;
             }
 
             .get-mods-nav {
-
                 min-width: 95px;
-
                 height: 40px;
 
                 padding: 0 12px;
@@ -975,42 +991,40 @@
             }
 
             .mods-slider {
-
                 height: 480px;
-
                 overflow: hidden;
             }
 
             .mod-card {
-
                 width: 285px;
-
                 height: 410px;
             }
 
             .mod-card[data-position="1"] {
-
                 transform:
                     translateX(180px)
                     scale(0.70);
             }
 
             .mod-card[data-position="2"] {
-
                 transform:
                     translateX(300px)
                     scale(0.55);
             }
 
             .mod-card[data-position="3"] {
-
                 transform:
                     translateX(-180px)
                     scale(0.70);
             }
 
-            .mod-logo span {
+            .mod-card[data-position="4"] {
+                transform:
+                    translateX(-300px)
+                    scale(0.55);
+            }
 
+            .mod-logo span {
                 font-size: 65px;
             }
         }
@@ -1019,9 +1033,7 @@
 
 </head>
 
-
 <body>
-
 
     <!-- =====================================================
          NAVBAR
@@ -1044,9 +1056,7 @@
 
             </a>
 
-
             <nav class="nav-links">
-
 
                 <a href="#home">
 
@@ -1071,7 +1081,6 @@
                     </span>
 
                 </a>
-
 
                 <a href="#downloads">
 
@@ -1111,7 +1120,6 @@
 
                 </a>
 
-
                 <a
                     href="YOUR-DISCORD-LINK-HERE"
                     target="_blank"
@@ -1135,7 +1143,6 @@
                     </span>
 
                 </a>
-
 
                 <a
                     href="YOUR-YOUTUBE-LINK-HERE"
@@ -1161,7 +1168,6 @@
 
                 </a>
 
-
                 <a
                     href="#downloads"
                     class="get-mods-nav"
@@ -1175,15 +1181,11 @@
 
     </header>
 
-
     <!-- =====================================================
          MAIN
     ===================================================== -->
 
     <main>
-
-
-        <!-- HOME -->
 
         <section
             id="home"
@@ -1204,9 +1206,6 @@
 
         </section>
 
-
-        <!-- DOWNLOADS -->
-
         <section
             id="downloads"
             class="page-section"
@@ -1222,9 +1221,7 @@
                     Choose a mod below to get started.
                 </p>
 
-
                 <div class="mods-slider">
-
 
                     <!-- METEOR CLIENT -->
 
@@ -1235,13 +1232,8 @@
                     >
 
                         <div class="mod-logo">
-
-                            <span>
-                                M
-                            </span>
-
+                            <span>M</span>
                         </div>
-
 
                         <div class="mod-info">
 
@@ -1265,7 +1257,6 @@
 
                     </div>
 
-
                     <!-- GLAZED -->
 
                     <div
@@ -1275,13 +1266,8 @@
                     >
 
                         <div class="mod-logo">
-
-                            <span>
-                                G
-                            </span>
-
+                            <span>G</span>
                         </div>
-
 
                         <div class="mod-info">
 
@@ -1305,7 +1291,6 @@
 
                     </div>
 
-
                     <!-- OPSEC -->
 
                     <div
@@ -1315,13 +1300,8 @@
                     >
 
                         <div class="mod-logo">
-
-                            <span>
-                                O
-                            </span>
-
+                            <span>O</span>
                         </div>
-
 
                         <div class="mod-info">
 
@@ -1345,7 +1325,6 @@
 
                     </div>
 
-
                     <!-- COMING SOON -->
 
                     <div
@@ -1355,13 +1334,8 @@
                     >
 
                         <div class="mod-logo">
-
-                            <span>
-                                ?
-                            </span>
-
+                            <span>?</span>
                         </div>
-
 
                         <div class="mod-info">
 
@@ -1373,11 +1347,13 @@
                                 A new mod will be available here soon.
                             </p>
 
-                            <div class="download-button"
-                                 style="
+                            <div
+                                class="download-button"
+                                style="
                                     opacity: 0.45;
                                     cursor: default;
-                                 ">
+                                "
+                            >
                                 Coming Soon
                             </div>
 
@@ -1385,6 +1361,39 @@
 
                     </div>
 
+                    <!-- KRYPTON CLIENT -->
+
+                    <div
+                        class="mod-card"
+                        data-index="4"
+                        data-position="4"
+                    >
+
+                        <div class="mod-logo">
+                            <span>K</span>
+                        </div>
+
+                        <div class="mod-info">
+
+                            <h3>
+                                Krypton Client
+                            </h3>
+
+                            <p>
+                                Best Client Overall
+                            </p>
+
+                            <a
+                                href="KryptonCracked.jar"
+                                class="download-button"
+                                download
+                            >
+                                Download
+                            </a>
+
+                        </div>
+
+                    </div>
 
                     <!-- DOTS -->
 
@@ -1414,6 +1423,12 @@
                             aria-label="Coming Soon"
                         ></button>
 
+                        <button
+                            class="slider-dot"
+                            data-slide="4"
+                            aria-label="Krypton Client"
+                        ></button>
+
                     </div>
 
                 </div>
@@ -1424,7 +1439,6 @@
 
     </main>
 
-
     <!-- =====================================================
          SPACE BACKGROUND
     ===================================================== -->
@@ -1432,13 +1446,10 @@
     <div id="space">
 
         <div class="purple-cloud cloud1"></div>
-
         <div class="purple-cloud cloud2"></div>
-
         <div class="purple-cloud cloud3"></div>
 
     </div>
-
 
     <script>
 
@@ -1453,7 +1464,6 @@
                 )
             ];
 
-
         const dots =
             [
                 ...document.querySelectorAll(
@@ -1461,9 +1471,7 @@
                 )
             ];
 
-
         let activeIndex = 0;
-
 
         function updateSlider() {
 
@@ -1478,13 +1486,11 @@
                         ) %
                         cards.length;
 
-
                     card.dataset.position =
                         position;
 
                 }
             );
-
 
             dots.forEach(
                 (dot, index) => {
@@ -1499,7 +1505,6 @@
 
         }
 
-
         function selectCard(index) {
 
             activeIndex =
@@ -1508,7 +1513,6 @@
             updateSlider();
 
         }
-
 
         cards.forEach(
             (card, index) => {
@@ -1522,11 +1526,8 @@
                                 ".download-button"
                             )
                         ) {
-
                             return;
-
                         }
-
 
                         selectCard(index);
 
@@ -1535,7 +1536,6 @@
 
             }
         );
-
 
         dots.forEach(
             (dot, index) => {
@@ -1552,9 +1552,7 @@
             }
         );
 
-
         updateSlider();
-
 
         /* =====================================================
            STAR FIELD
@@ -1565,10 +1563,8 @@
                 "space"
             );
 
-
         const starCount =
             320;
-
 
         for (
             let i = 0;
@@ -1581,15 +1577,12 @@
                     "div"
                 );
 
-
             star.classList.add(
                 "star"
             );
 
-
             const size =
                 Math.random();
-
 
             if (
                 size > 0.90
@@ -1611,18 +1604,15 @@
 
             }
 
-
             star.style.left =
                 Math.random() *
                 100 +
                 "%";
 
-
             star.style.top =
                 Math.random() *
                 100 +
                 "%";
-
 
             star.style.setProperty(
                 "--opacity",
@@ -1630,7 +1620,6 @@
                 Math.random() *
                 0.75
             );
-
 
             star.style.setProperty(
                 "--twinkle-time",
@@ -1640,12 +1629,10 @@
                 "s"
             );
 
-
             star.style.animationDelay =
                 Math.random() *
                 5 +
                 "s";
-
 
             space.appendChild(
                 star
