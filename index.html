@@ -1,21 +1,44 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>VanillaMods</title>
 
-    <!-- FUTURISTIC FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- =========================
+         FONT
+    ========================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&display=swap"
         rel="stylesheet"
     >
 
+
     <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
 
         * {
             margin: 0;
@@ -29,27 +52,29 @@
         }
 
 
-        html,
         body {
             width: 100%;
-            min-height: 100%;
+            min-height: 100vh;
+
             background: #000;
-            font-family: Arial, sans-serif;
-        }
 
+            color: white;
 
-        body {
+            font-family:
+                Arial,
+                sans-serif;
+
             overflow-x: hidden;
-            overflow-y: auto;
         }
 
 
-        /* =========================
-           TOP NAVIGATION
-        ========================= */
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
 
         .navbar {
             position: fixed;
+
             top: 0;
             left: 0;
 
@@ -69,10 +94,12 @@
             -webkit-backdrop-filter: blur(16px);
 
             border-bottom:
-                1px solid rgba(170, 80, 255, 0.16);
+                1px solid
+                rgba(170, 80, 255, 0.16);
 
             box-shadow:
-                0 8px 30px rgba(0, 0, 0, 0.45);
+                0 8px 30px
+                rgba(0, 0, 0, 0.45);
         }
 
 
@@ -83,19 +110,19 @@
             padding: 0 28px;
 
             display: flex;
+
             align-items: center;
         }
 
 
-        /* =========================
-           WEBSITE LOGO
-        ========================= */
+        /* =====================================================
+           LOGO
+        ===================================================== */
 
         .site-logo-link {
             position: absolute;
 
             left: 28px;
-
             top: 50%;
 
             transform:
@@ -118,7 +145,8 @@
 
 
         .site-logo-link:hover .site-logo {
-            transform: scale(1.08);
+            transform:
+                scale(1.08);
 
             filter:
                 drop-shadow(
@@ -128,9 +156,9 @@
         }
 
 
-        /* =========================
-           NAVIGATION
-        ========================= */
+        /* =====================================================
+           NAV LINKS
+        ===================================================== */
 
         .nav-links {
             width: 100%;
@@ -223,15 +251,11 @@
         }
 
 
-        /* =========================
-           GET MODS BUTTON
-        ========================= */
+        /* =====================================================
+           GET MODS
+        ===================================================== */
 
         .get-mods-nav {
-            margin-left: 0;
-
-            position: relative;
-
             display: inline-flex;
 
             align-items: center;
@@ -263,8 +287,6 @@
 
             font-weight: 600 !important;
 
-            text-decoration: none;
-
             box-shadow:
                 0 0 12px
                 rgba(150, 60, 255, 0.35),
@@ -286,7 +308,6 @@
 
 
         .get-mods-nav:hover {
-
             transform:
                 translateY(-2px)
                 scale(1.03);
@@ -302,7 +323,6 @@
                 );
 
             box-shadow:
-
                 0 0 18px
                 rgba(175, 80, 255, 0.75),
 
@@ -311,22 +331,18 @@
         }
 
 
-        .get-mods-nav:active {
+        /* =====================================================
+           SECTIONS
+        ===================================================== */
 
-            transform:
-                scale(0.97);
+        main {
+            position: relative;
 
-            box-shadow:
-                0 0 30px
-                rgba(190, 90, 255, 0.9);
+            z-index: 5;
         }
 
 
-        /* =========================
-           HOME HERO
-        ========================= */
-
-        #home {
+        .page-section {
             position: relative;
 
             width: 100%;
@@ -342,9 +358,16 @@
             text-align: center;
 
             padding:
-                100px 20px 40px;
+                110px 25px 70px;
+        }
 
-            z-index: 5;
+
+        /* =====================================================
+           HOME
+        ===================================================== */
+
+        #home {
+            min-height: 100vh;
         }
 
 
@@ -378,10 +401,7 @@
 
             color: white;
 
-            text-transform: uppercase;
-
             text-shadow:
-
                 0 0 10px
                 rgba(190, 100, 255, 0.9),
 
@@ -444,46 +464,498 @@
         }
 
 
-        @keyframes heroFadeIn {
+        /* =====================================================
+           DOWNLOAD SECTION
+        ===================================================== */
 
-            from {
-                opacity: 0;
+        #downloads {
+            min-height: 100vh;
 
-                transform:
-                    translateY(25px);
-            }
+            align-items: flex-start;
 
-            to {
-                opacity: 1;
+            padding-top: 130px;
 
-                transform:
-                    translateY(0);
-            }
+            padding-bottom: 120px;
         }
 
 
-        @keyframes titleGlow {
+        .downloads-container {
+            width: 100%;
 
-            0% {
-                background-position:
-                    0% center;
-            }
+            max-width: 950px;
 
-            50% {
-                background-position:
-                    100% center;
-            }
-
-            100% {
-                background-position:
-                    0% center;
-            }
+            margin: 0 auto;
         }
 
 
-        /* =========================
-           SPACE BACKGROUND
-        ========================= */
+        .downloads-title {
+            font-family:
+                "Orbitron",
+                Arial,
+                sans-serif;
+
+            font-size:
+                clamp(38px, 6vw, 70px);
+
+            font-weight: 800;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 12px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #ffffff,
+                    #d7a7ff,
+                    #a85cff,
+                    #ffffff
+                );
+
+            background-size:
+                250% auto;
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            -webkit-text-fill-color:
+                transparent;
+
+            animation:
+                titleGlow
+                5s
+                linear
+                infinite;
+        }
+
+
+        .downloads-subtitle {
+            font-family:
+                "Orbitron",
+                Arial,
+                sans-serif;
+
+            color:
+                rgba(225, 215, 240, 0.65);
+
+            font-size: 14px;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 55px;
+        }
+
+
+        /* =====================================================
+           SLIDER AREA
+        ===================================================== */
+
+        .mods-slider {
+            position: relative;
+
+            width: 100%;
+
+            height: 560px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+
+        /* =====================================================
+           MOD CARD
+        ===================================================== */
+
+        .mod-card {
+            position: absolute;
+
+            width: 350px;
+            height: 450px;
+
+            border-radius: 22px;
+
+            border:
+                1px solid
+                rgba(170, 80, 255, 0.28);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(50, 17, 75, 0.82),
+                    rgba(15, 7, 27, 0.94)
+                );
+
+            backdrop-filter:
+                blur(15px);
+
+            -webkit-backdrop-filter:
+                blur(15px);
+
+            box-shadow:
+                0 15px 45px
+                rgba(0, 0, 0, 0.5),
+
+                inset 0 0 30px
+                rgba(130, 50, 220, 0.05);
+
+            overflow: hidden;
+
+            cursor: pointer;
+
+            user-select: none;
+
+            transition:
+                transform 0.55s cubic-bezier(
+                    0.22,
+                    1,
+                    0.36,
+                    1
+                ),
+
+                opacity 0.45s ease,
+
+                filter 0.45s ease,
+
+                box-shadow 0.45s ease;
+        }
+
+
+        /* =====================================================
+           CARD POSITIONS
+        ===================================================== */
+
+        .mod-card[data-position="0"] {
+            transform:
+                translateX(0)
+                translateY(0)
+                scale(1);
+
+            z-index: 40;
+
+            opacity: 1;
+
+            filter: none;
+
+            box-shadow:
+                0 25px 70px
+                rgba(0, 0, 0, 0.6),
+
+                0 0 35px
+                rgba(145, 50, 255, 0.18);
+        }
+
+
+        .mod-card[data-position="1"] {
+            transform:
+                translateX(55px)
+                translateY(12px)
+                scale(0.94);
+
+            z-index: 30;
+
+            opacity: 0.82;
+
+            filter:
+                brightness(0.72);
+        }
+
+
+        .mod-card[data-position="2"] {
+            transform:
+                translateX(105px)
+                translateY(24px)
+                scale(0.88);
+
+            z-index: 20;
+
+            opacity: 0.58;
+
+            filter:
+                brightness(0.52);
+        }
+
+
+        .mod-card[data-position="3"] {
+            transform:
+                translateX(150px)
+                translateY(36px)
+                scale(0.82);
+
+            z-index: 10;
+
+            opacity: 0.35;
+
+            filter:
+                brightness(0.35);
+        }
+
+
+        /* =====================================================
+           CARD TOP LOGO SECTION
+        ===================================================== */
+
+        .mod-logo {
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            height: 43%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius:
+                22px 22px 14px 14px;
+
+            border-bottom:
+                1px solid
+                rgba(190, 100, 255, 0.25);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(90, 25, 135, 0.78),
+                    rgba(35, 10, 60, 0.88)
+                );
+
+            box-shadow:
+                inset 0 0 35px
+                rgba(170, 70, 255, 0.12);
+        }
+
+
+        .mod-logo span {
+            font-family:
+                "Orbitron",
+                Arial,
+                sans-serif;
+
+            font-size: 78px;
+
+            font-weight: 800;
+
+            line-height: 1;
+
+            color: white;
+
+            text-shadow:
+                0 0 10px
+                rgba(210, 150, 255, 1),
+
+                0 0 25px
+                rgba(170, 70, 255, 0.9),
+
+                0 0 55px
+                rgba(130, 40, 255, 0.6);
+        }
+
+
+        /* =====================================================
+           CARD INFORMATION
+        ===================================================== */
+
+        .mod-info {
+            position: absolute;
+
+            left: 0;
+            right: 0;
+
+            bottom: 0;
+
+            height: 57%;
+
+            padding:
+                25px 28px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+        }
+
+
+        .mod-info h3 {
+            font-family:
+                "Orbitron",
+                Arial,
+                sans-serif;
+
+            font-size: 22px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.5px;
+
+            color: white;
+
+            margin-bottom: 10px;
+        }
+
+
+        .mod-info p {
+            font-size: 14px;
+
+            line-height: 1.6;
+
+            color:
+                rgba(225, 215, 240, 0.62);
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =====================================================
+           DOWNLOAD BUTTON
+        ===================================================== */
+
+        .download-button {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-width: 135px;
+
+            height: 42px;
+
+            padding: 0 22px;
+
+            border-radius: 10px;
+
+            border:
+                1px solid
+                rgba(190, 100, 255, 0.75);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(85, 25, 130, 0.85),
+                    rgba(40, 10, 65, 0.95)
+                );
+
+            color: white;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            text-decoration: none;
+
+            box-shadow:
+                0 0 12px
+                rgba(150, 60, 255, 0.25);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease,
+                background 0.25s ease;
+        }
+
+
+        .download-button:hover {
+            transform:
+                translateY(-2px);
+
+            border-color:
+                rgba(225, 170, 255, 1);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(110, 30, 165, 0.95),
+                    rgba(50, 12, 80, 1)
+                );
+
+            box-shadow:
+                0 0 18px
+                rgba(175, 80, 255, 0.65),
+
+                0 0 35px
+                rgba(145, 50, 255, 0.25);
+        }
+
+
+        /* =====================================================
+           SLIDER CONTROLS
+        ===================================================== */
+
+        .slider-controls {
+            position: absolute;
+
+            bottom: 0;
+
+            left: 50%;
+
+            transform:
+                translateX(-50%);
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            z-index: 100;
+        }
+
+
+        .slider-dot {
+            width: 8px;
+            height: 8px;
+
+            border-radius: 50%;
+
+            border: none;
+
+            background:
+                rgba(190, 130, 230, 0.28);
+
+            cursor: pointer;
+
+            transition:
+                width 0.25s ease,
+                background 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+
+        .slider-dot.active {
+            width: 24px;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #9b5cff,
+                    #d77cff
+                );
+
+            box-shadow:
+                0 0 12px
+                rgba(170, 80, 255, 0.7);
+        }
+
+
+        /* =====================================================
+           SPACE
+        ===================================================== */
 
         #space {
             position: fixed;
@@ -531,9 +1003,9 @@
         }
 
 
-        /* =========================
+        /* =====================================================
            PURPLE CLOUDS
-        ========================= */
+        ===================================================== */
 
         .purple-cloud {
             position: absolute;
@@ -605,9 +1077,9 @@
         }
 
 
-        /* =========================
+        /* =====================================================
            STARS
-        ========================= */
+        ===================================================== */
 
         .star {
             position: absolute;
@@ -680,9 +1152,9 @@
         }
 
 
-        /* =========================
+        /* =====================================================
            MOVING STARS
-        ========================= */
+        ===================================================== */
 
         .moving-star {
             position: absolute;
@@ -736,9 +1208,9 @@
         }
 
 
-        /* =========================
+        /* =====================================================
            SHOOTING STARS
-        ========================= */
+        ===================================================== */
 
         .shooting-star {
             position: absolute;
@@ -796,11 +1268,52 @@
         }
 
 
-        /* =========================
-           MOBILE
-        ========================= */
+        /* =====================================================
+           HERO ANIMATION
+        ===================================================== */
 
-        @media (max-width: 600px) {
+        @keyframes heroFadeIn {
+
+            from {
+                opacity: 0;
+
+                transform:
+                    translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+        }
+
+
+        @keyframes titleGlow {
+
+            0% {
+                background-position:
+                    0% center;
+            }
+
+            50% {
+                background-position:
+                    100% center;
+            }
+
+            100% {
+                background-position:
+                    0% center;
+            }
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 700px) {
 
             .navbar {
                 height: 58px;
@@ -824,30 +1337,76 @@
 
 
             .nav-links {
-                gap: 13px;
+                gap: 10px;
             }
 
 
             .nav-links a {
-                font-size: 11px;
+                font-size: 10px;
+
                 gap: 4px;
             }
 
 
             .icon {
-                width: 16px;
-                height: 16px;
+                width: 15px;
+                height: 15px;
             }
 
 
             .get-mods-nav {
                 height: 40px;
 
-                min-width: 105px;
+                min-width: 95px;
 
-                padding: 0 16px;
+                padding: 0 12px;
 
                 font-size: 11px !important;
+            }
+
+
+            .mods-slider {
+                height: 540px;
+            }
+
+
+            .mod-card {
+                width: 285px;
+                height: 410px;
+            }
+
+
+            .mod-card[data-position="1"] {
+                transform:
+                    translateX(35px)
+                    translateY(10px)
+                    scale(0.94);
+            }
+
+
+            .mod-card[data-position="2"] {
+                transform:
+                    translateX(65px)
+                    translateY(20px)
+                    scale(0.88);
+            }
+
+
+            .mod-card[data-position="3"] {
+                transform:
+                    translateX(90px)
+                    translateY(30px)
+                    scale(0.82);
+            }
+
+
+            .mod-logo span {
+                font-size: 65px;
+            }
+
+
+            .mod-info h3 {
+                font-size: 19px;
             }
 
 
@@ -858,20 +1417,24 @@
 
             .hero-subtitle {
                 letter-spacing: 1px;
+
                 line-height: 1.6;
             }
+
         }
 
+
     </style>
+
 </head>
 
 
 <body>
 
 
-    <!-- =========================
-         TOP NAVIGATION
-    ========================= -->
+    <!-- =====================================================
+         NAVIGATION
+    ===================================================== -->
 
     <header class="navbar">
 
@@ -894,7 +1457,7 @@
             </a>
 
 
-            <!-- NAVIGATION -->
+            <!-- LINKS -->
 
             <nav class="nav-links">
 
@@ -919,7 +1482,9 @@
 
                     </svg>
 
-                    <span>Home</span>
+                    <span>
+                        Home
+                    </span>
 
                 </a>
 
@@ -958,7 +1523,9 @@
 
                     </svg>
 
-                    <span>Downloads</span>
+                    <span>
+                        Downloads
+                    </span>
 
                 </a>
 
@@ -978,12 +1545,14 @@
 
                         <path
                             fill="currentColor"
-                            d="M20.3 4.4a19.8 19.8 0 0 0-4.9-1.5.1.1 0 0 0-.1.04c-.2.38-.4.77-.6 1.2a18.2 18.2 0 0 0-5.4 0c-.2-.43-.4-.82-.6-1.2a.1.1 0 0 0-.1-.04 19.8 19.8 0 0 0-4.9 1.5.1.1 0 0 0-.04.04C.6 8.2-.2 12.5.1 16.8a.1.1 0 0 0 .04.07 19.9 19.9 0 0 0 6 3 .1.1 0 0 0 .1-.03c.5-.7.9-1.4 1.2-2.1a.1.1 0 0 0-.04-.1 12.8 12.8 0 0 1-1.9-.9.1.1 0 0 1 0-.13l.4-.3a.1.1 0 0 1 .1 0c3.9 1.8 8.1 1.8 12 0a.1.1 0 0 1 .1 0l.4.3a.1.1 0 0 1 0 .13c-.6.35-1.2.65-1.9.9a.1.1 0 0 0-.04.1c.3.7.7 1.4 1.2 2.1a.1.1 0 0 0 .1.03 19.8 19.8 0 0 0 6-3 .1.1 0 0 0 .04-.07c.4-4.7-.8-9-3.5-12.4a.1.1 0 0 0-.06-.04ZM8 15.3c-1.2 0-2.1-1.1-2.1-2.4S6.8 10.5 8 10.5s2.2 1.1 2.2 2.4-.9 2.4-2.2 2.4Zm8 0c-1.2 0-2.1-1.1-2.1-2.4-.9-1.3-2.1-1.3-2.1-2.4s.9-2.4 2.1-2.4 2.2 1.1 2.2 2.4-.9 2.4-2.2 2.4Z"
+                            d="M20.3 4.4a19.8 19.8 0 0 0-4.9-1.5.1.1 0 0 0-.1.04c-.2.38-.4.77-.6 1.2a18.2 18.2 0 0 0-5.4 0c-.2-.43-.4-.82-.6-1.2a.1.1 0 0 0-.1-.04 19.8 19.8 0 0 0-4.9 1.5.1.1 0 0 0-.04.04C.6 8.2-.2 12.5.1 16.8a.1.1 0 0 0 .04.07 19.9 19.9 0 0 0 6 3 .1.1 0 0 0 .1-.03c.5-.7.9-1.4 1.2-2.1a.1.1 0 0 0-.04-.1 12.8 12.8 0 0 1-1.9-.9.1.1 0 0 1 0-.13l.4-.3a.1.1 0 0 1 .1 0c3.9 1.8 8.1 1.8 12 0a.1.1 0 0 1 .1 0l.4.3a.1.1 0 0 1 0 .13c-.6.35-1.2.65-1.9.9a.1.1 0 0 0-.04.1c.3.7.7 1.4 1.2 2.1a.1.1 0 0 0 .1.03 19.8 19.8 0 0 0 6-3 .1.1 0 0 0 .04-.07c.4-4.7-.8-9-3.5-12.4a.1.1 0 0 0-.06-.04ZM8 15.3c-1.2 0-2.1-1.1-2.1-2.4S6.8 10.5 8 10.5s2.2 1.1 2.2 2.4-.9 2.4-2.2 2.4Zm8 0c-1.2 0-2.1-1.1-2.1-2.4.9-1.3 2.1-2.4 2.1-2.4s2.2 1.1 2.2 2.4-.9 2.4-2.2 2.4Z"
                         />
 
                     </svg>
 
-                    <span>Discord</span>
+                    <span>
+                        Discord
+                    </span>
 
                 </a>
 
@@ -1008,7 +1577,9 @@
 
                     </svg>
 
-                    <span>YouTube</span>
+                    <span>
+                        YouTube
+                    </span>
 
                 </a>
 
@@ -1022,7 +1593,6 @@
                     Get Mods
                 </a>
 
-
             </nav>
 
         </div>
@@ -1030,19 +1600,32 @@
     </header>
 
 
-    <!-- =========================
-         HOME
-    ========================= -->
+    <!-- =====================================================
+         MAIN
+    ===================================================== -->
 
     <main>
 
-        <section id="home">
+
+        <!-- =================================================
+             HOME
+        ================================================= -->
+
+        <section
+            id="home"
+            class="page-section"
+        >
 
             <div class="hero-content">
 
                 <h1 class="hero-title">
-                    <span>VanillaMods</span>
+
+                    <span>
+                        VanillaMods
+                    </span>
+
                 </h1>
+
 
                 <p class="hero-subtitle">
                     Get The Best Mods For Your Game!
@@ -1052,12 +1635,260 @@
 
         </section>
 
+
+        <!-- =================================================
+             DOWNLOADS
+        ================================================= -->
+
+        <section
+            id="downloads"
+            class="page-section"
+        >
+
+            <div class="downloads-container">
+
+
+                <h2 class="downloads-title">
+                    Downloads
+                </h2>
+
+
+                <p class="downloads-subtitle">
+                    Choose a mod below to get started.
+                </p>
+
+
+                <!-- =================================================
+                     SLIDER
+                ================================================= -->
+
+                <div class="mods-slider">
+
+
+                    <!-- =========================
+                         METEOR CLIENT
+                    ========================= -->
+
+                    <div
+                        class="mod-card"
+                        data-index="0"
+                        data-position="0"
+                    >
+
+                        <div class="mod-logo">
+
+                            <span>
+                                M
+                            </span>
+
+                        </div>
+
+
+                        <div class="mod-info">
+
+                            <h3>
+                                Meteor Client
+                            </h3>
+
+
+                            <p>
+                                Use at your own risk
+                            </p>
+
+
+                            <a
+                                href="Meteor-Client.jar"
+                                class="download-button"
+                                download
+                            >
+                                Download
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================
+                         MOD 2
+                    ========================= -->
+
+                    <div
+                        class="mod-card"
+                        data-index="1"
+                        data-position="1"
+                    >
+
+                        <div class="mod-logo">
+
+                            <span>
+                                V
+                            </span>
+
+                        </div>
+
+
+                        <div class="mod-info">
+
+                            <h3>
+                                VanillaMod
+                            </h3>
+
+
+                            <p>
+                                More mods coming soon.
+                            </p>
+
+
+                            <a
+                                href="VanillaMod.jar"
+                                class="download-button"
+                                download
+                            >
+                                Download
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================
+                         MOD 3
+                    ========================= -->
+
+                    <div
+                        class="mod-card"
+                        data-index="2"
+                        data-position="2"
+                    >
+
+                        <div class="mod-logo">
+
+                            <span>
+                                C
+                            </span>
+
+                        </div>
+
+
+                        <div class="mod-info">
+
+                            <h3>
+                                Cosmic Mod
+                            </h3>
+
+
+                            <p>
+                                More mods coming soon.
+                            </p>
+
+
+                            <a
+                                href="Cosmic-Mod.jar"
+                                class="download-button"
+                                download
+                            >
+                                Download
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================
+                         MOD 4
+                    ========================= -->
+
+                    <div
+                        class="mod-card"
+                        data-index="3"
+                        data-position="3"
+                    >
+
+                        <div class="mod-logo">
+
+                            <span>
+                                X
+                            </span>
+
+                        </div>
+
+
+                        <div class="mod-info">
+
+                            <h3>
+                                X Mod
+                            </h3>
+
+
+                            <p>
+                                More mods coming soon.
+                            </p>
+
+
+                            <a
+                                href="X-Mod.jar"
+                                class="download-button"
+                                download
+                            >
+                                Download
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         DOTS
+                    ================================================= -->
+
+                    <div class="slider-controls">
+
+                        <button
+                            class="slider-dot active"
+                            data-slide="0"
+                            aria-label="Meteor Client"
+                        ></button>
+
+
+                        <button
+                            class="slider-dot"
+                            data-slide="1"
+                            aria-label="VanillaMod"
+                        ></button>
+
+
+                        <button
+                            class="slider-dot"
+                            data-slide="2"
+                            aria-label="Cosmic Mod"
+                        ></button>
+
+
+                        <button
+                            class="slider-dot"
+                            data-slide="3"
+                            aria-label="X Mod"
+                        ></button>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
 
 
-    <!-- =========================
-         SPACE BACKGROUND
-    ========================= -->
+    <!-- =====================================================
+         COSMIC BACKGROUND
+    ===================================================== -->
 
     <div id="space">
 
@@ -1072,15 +1903,148 @@
     </div>
 
 
+    <!-- =====================================================
+         JAVASCRIPT
+    ===================================================== -->
+
     <script>
 
+
+        /* =====================================================
+           MOD SLIDER
+        ===================================================== */
+
+        const cards =
+            Array.from(
+                document.querySelectorAll(
+                    ".mod-card"
+                )
+            );
+
+
+        const dots =
+            Array.from(
+                document.querySelectorAll(
+                    ".slider-dot"
+                )
+            );
+
+
+        let activeIndex = 0;
+
+
+        function updateSlider() {
+
+            cards.forEach(
+                (card, index) => {
+
+                    let position =
+                        (
+                            index -
+                            activeIndex +
+                            cards.length
+                        ) %
+                        cards.length;
+
+
+                    card.dataset.position =
+                        position;
+
+                }
+            );
+
+
+            dots.forEach(
+                (dot, index) => {
+
+                    dot.classList.toggle(
+                        "active",
+                        index === activeIndex
+                    );
+
+                }
+            );
+
+        }
+
+
+        function bringToFront(index) {
+
+            activeIndex =
+                index;
+
+            updateSlider();
+
+        }
+
+
+        cards.forEach(
+            (card, index) => {
+
+                card.addEventListener(
+                    "click",
+                    (event) => {
+
+                        /*
+                         * Don't change the card
+                         * when the download button
+                         * itself is clicked.
+                         */
+
+                        if (
+                            event.target.closest(
+                                ".download-button"
+                            )
+                        ) {
+                            return;
+                        }
+
+
+                        bringToFront(index);
+
+                    }
+                );
+
+            }
+        );
+
+
+        dots.forEach(
+            (dot, index) => {
+
+                dot.addEventListener(
+                    "click",
+                    () => {
+
+                        bringToFront(index);
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* =====================================================
+           INITIAL SLIDER
+        ===================================================== */
+
+        updateSlider();
+
+
+        /* =====================================================
+           SPACE BACKGROUND
+        ===================================================== */
+
         const space =
-            document.getElementById("space");
+            document.getElementById(
+                "space"
+            );
 
 
-        /* =========================
+        /* =====================================================
            NORMAL STARS
-        ========================= */
+        ===================================================== */
 
         const starCount = 320;
 
@@ -1092,70 +2056,93 @@
         ) {
 
             const star =
-                document.createElement("div");
+                document.createElement(
+                    "div"
+                );
 
 
-            star.classList.add("star");
+            star.classList.add(
+                "star"
+            );
 
 
             const size =
                 Math.random();
 
 
-            if (size > 0.90) {
+            if (
+                size > 0.90
+            ) {
 
-                star.classList.add("big");
+                star.classList.add(
+                    "big"
+                );
 
             }
 
-            else if (size < 0.35) {
+            else if (
+                size < 0.35
+            ) {
 
-                star.classList.add("small");
+                star.classList.add(
+                    "small"
+                );
 
             }
 
 
             star.style.left =
-                Math.random() * 100 + "%";
+                Math.random() *
+                100 +
+                "%";
 
 
             star.style.top =
-                Math.random() * 100 + "%";
+                Math.random() *
+                100 +
+                "%";
 
 
             star.style.setProperty(
                 "--opacity",
                 0.25 +
-                Math.random() * 0.75
+                Math.random() *
+                0.75
             );
 
 
             star.style.setProperty(
                 "--twinkle-time",
                 1.5 +
-                Math.random() * 5 +
+                Math.random() *
+                5 +
                 "s"
             );
 
 
             star.style.animationDelay =
-                Math.random() * 5 +
+                Math.random() *
+                5 +
                 "s";
 
 
-            space.appendChild(star);
+            space.appendChild(
+                star
+            );
 
         }
 
 
-        /* =========================
+        /* =====================================================
            MOVING STARS
-        ========================= */
+        ===================================================== */
 
         function createMovingStar() {
 
             const star =
-                document.createElement("div");
+                document.createElement(
+                    "div"
+                );
 
 
             star.classList.add(
@@ -1167,10 +2154,13 @@
             let startY;
 
 
-            if (Math.random() < 0.5) {
+            if (
+                Math.random() < 0.5
+            ) {
 
                 startX =
-                    Math.random() * 100;
+                    Math.random() *
+                    100;
 
                 startY = -2;
 
@@ -1181,82 +2171,101 @@
                 startX = -2;
 
                 startY =
-                    Math.random() * 100;
+                    Math.random() *
+                    100;
 
             }
 
 
             star.style.left =
-                startX + "%";
+                startX +
+                "%";
 
 
             star.style.top =
-                startY + "%";
+                startY +
+                "%";
 
 
             const moveX =
                 100 +
-                Math.random() * 550;
+                Math.random() *
+                550;
 
 
             const moveY =
                 -150 +
-                Math.random() * 700;
+                Math.random() *
+                700;
 
 
             star.style.setProperty(
                 "--move-x",
-                moveX + "px"
+                moveX +
+                "px"
             );
 
 
             star.style.setProperty(
                 "--move-y",
-                moveY + "px"
+                moveY +
+                "px"
             );
 
 
             star.style.setProperty(
                 "--move-time",
                 3 +
-                Math.random() * 5 +
+                Math.random() *
+                5 +
                 "s"
             );
 
 
-            space.appendChild(star);
+            space.appendChild(
+                star
+            );
 
 
-            setTimeout(() => {
+            setTimeout(
+                () => {
 
-                star.remove();
+                    star.remove();
 
-            }, 9000);
+                },
+                9000
+            );
 
         }
 
 
-        setInterval(() => {
+        setInterval(
+            () => {
 
-            if (
-                Math.random() < 0.8
-            ) {
+                if (
+                    Math.random() <
+                    0.8
+                ) {
 
-                createMovingStar();
+                    createMovingStar();
 
-            }
+                }
 
-        }, 1000);
+            },
+            1000
+        );
 
 
-        /* =========================
+        /* =====================================================
            SHOOTING STARS
-        ========================= */
+        ===================================================== */
 
         function createShootingStar() {
 
             const star =
-                document.createElement("div");
+                document.createElement(
+                    "div"
+                );
 
 
             star.classList.add(
@@ -1265,23 +2274,30 @@
 
 
             star.style.left =
-                Math.random() * 55 +
+                Math.random() *
+                55 +
                 "%";
 
 
             star.style.top =
-                Math.random() * 35 +
+                Math.random() *
+                35 +
                 "%";
 
 
-            space.appendChild(star);
+            space.appendChild(
+                star
+            );
 
 
-            setTimeout(() => {
+            setTimeout(
+                () => {
 
-                star.remove();
+                    star.remove();
 
-            }, 1300);
+                },
+                1300
+            );
 
         }
 
@@ -1293,7 +2309,8 @@
 
             const next =
                 3000 +
-                Math.random() * 5000;
+                Math.random() *
+                5000;
 
 
             setTimeout(
@@ -1306,7 +2323,10 @@
 
         randomShootingStar();
 
+
     </script>
+
 
 </body>
 </html>
+```
