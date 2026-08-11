@@ -45,6 +45,7 @@
             overflow-x: hidden;
         }
 
+
         /* =====================================================
            NAVBAR
         ===================================================== */
@@ -70,7 +71,8 @@
             -webkit-backdrop-filter: blur(16px);
 
             border-bottom:
-                1px solid rgba(170, 80, 255, 0.16);
+                1px solid
+                rgba(170, 80, 255, 0.16);
 
             box-shadow:
                 0 8px 30px rgba(0, 0, 0, 0.45);
@@ -85,6 +87,7 @@
             display: flex;
             align-items: center;
         }
+
 
         /* =====================================================
            LOGO
@@ -120,6 +123,7 @@
                     rgba(170, 80, 255, 0.8)
                 );
         }
+
 
         /* =====================================================
            NAV LINKS
@@ -206,6 +210,7 @@
             color: currentColor;
         }
 
+
         /* =====================================================
            GET MODS
         ===================================================== */
@@ -272,6 +277,7 @@
                 rgba(145, 50, 255, 0.4);
         }
 
+
         /* =====================================================
            SECTIONS
         ===================================================== */
@@ -294,6 +300,7 @@
             padding:
                 110px 25px 70px;
         }
+
 
         /* =====================================================
            HOME
@@ -368,6 +375,7 @@
 
         }
 
+
         /* =====================================================
            DOWNLOADS
         ===================================================== */
@@ -381,9 +389,11 @@
 
         .downloads-container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1250px;
 
             margin: auto;
+
+            position: relative;
         }
 
         .downloads-title {
@@ -440,15 +450,24 @@
             margin-bottom: 45px;
         }
 
+
         /* =====================================================
-           SLIDER
+           MOD AREA
         ===================================================== */
+
+        .mod-area {
+            position: relative;
+
+            width: 100%;
+
+            padding-right: 100px;
+        }
 
         .mods-slider {
             position: relative;
 
             width: 100%;
-            height: 540px;
+            height: 500px;
 
             display: flex;
 
@@ -457,6 +476,7 @@
 
             overflow: visible;
         }
+
 
         /* =====================================================
            MOD CARDS
@@ -501,6 +521,7 @@
                 filter 0.45s ease,
                 box-shadow 0.45s ease;
         }
+
 
         /* =====================================================
            CARD POSITIONS
@@ -569,20 +590,6 @@
                 brightness(0.65);
         }
 
-        .mod-card[data-position="4"] {
-
-            transform:
-                translateX(-700px)
-                scale(0.62);
-
-            z-index: 20;
-
-            opacity: 0.42;
-
-            filter:
-                brightness(0.42);
-        }
-
         .mod-card[data-position="1"]:hover,
         .mod-card[data-position="3"]:hover {
 
@@ -591,6 +598,7 @@
             filter:
                 brightness(0.9);
         }
+
 
         /* =====================================================
            CARD LOGO
@@ -655,6 +663,7 @@
                 rgba(130, 40, 255, 0.6);
         }
 
+
         /* =====================================================
            CARD INFO
         ===================================================== */
@@ -703,6 +712,7 @@
 
             margin-bottom: 20px;
         }
+
 
         /* =====================================================
            DOWNLOAD BUTTON
@@ -762,21 +772,22 @@
                 rgba(145, 50, 255, 0.25);
         }
 
+
         /* =====================================================
-           LEGAL / ILLEGAL SELECTOR
+           LEGAL / ILLEGAL SWITCHER
         ===================================================== */
 
-        .legality-selector {
+        .category-switcher {
 
             position: absolute;
 
-            right: 20px;
+            right: -5px;
             top: 50%;
 
             transform:
                 translateY(-50%);
 
-            width: 115px;
+            width: 74px;
 
             display: flex;
 
@@ -785,62 +796,70 @@
             align-items: center;
             justify-content: center;
 
-            gap: 16px;
+            gap: 13px;
 
-            z-index: 200;
+            z-index: 100;
         }
 
-        .legality-arrow {
+        .category-arrow {
 
-            width: 46px;
-            height: 46px;
+            width: 54px;
+            height: 54px;
 
-            border-radius: 12px;
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 15px;
 
             border:
                 1px solid
-                rgba(190, 100, 255, 0.65);
+                rgba(190, 100, 255, 0.55);
 
             background:
                 linear-gradient(
-                    135deg,
-                    rgba(75, 20, 115, 0.8),
-                    rgba(35, 10, 60, 0.95)
+                    145deg,
+                    rgba(70, 20, 105, 0.9),
+                    rgba(25, 8, 45, 0.95)
                 );
 
             color: white;
 
-            font-size: 20px;
-            font-weight: bold;
-
             cursor: pointer;
 
             box-shadow:
-                0 0 12px
-                rgba(150, 60, 255, 0.25);
+                0 0 15px
+                rgba(140, 50, 240, 0.2);
 
             transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease,
-                border-color 0.2s ease;
+                transform 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
         }
 
-        .legality-arrow:hover {
+        .category-arrow:hover {
 
             transform:
                 scale(1.08);
 
             border-color:
-                rgba(225, 170, 255, 1);
+                rgba(220, 160, 255, 0.95);
 
             box-shadow:
-                0 0 18px
+                0 0 20px
                 rgba(175, 80, 255, 0.65);
         }
 
-        .legality-label {
+        .category-arrow svg {
 
-            min-width: 105px;
+            width: 25px;
+            height: 25px;
+        }
+
+        .category-name {
+
+            min-width: 74px;
 
             text-align: center;
 
@@ -849,21 +868,39 @@
                 Arial,
                 sans-serif;
 
-            font-size: 13px;
+            font-size: 11px;
+
             font-weight: 700;
 
             letter-spacing: 1px;
 
             color: white;
 
-            text-shadow:
-                0 0 10px
-                rgba(180, 90, 255, 0.7);
+            padding:
+                12px 5px;
 
-            transition:
-                color 0.25s ease,
-                text-shadow 0.25s ease;
+            border-radius: 12px;
+
+            border:
+                1px solid
+                rgba(190, 100, 255, 0.35);
+
+            background:
+                rgba(35, 10, 55, 0.75);
+
+            box-shadow:
+                inset 0 0 20px
+                rgba(150, 50, 255, 0.08);
         }
+
+        .category-name.legal {
+            color: #d9b8ff;
+        }
+
+        .category-name.illegal {
+            color: #ffffff;
+        }
+
 
         /* =====================================================
            SPACE BACKGROUND
@@ -962,6 +999,7 @@
                 rgba(85, 0, 210, 0.34);
         }
 
+
         /* =====================================================
            STARS
         ===================================================== */
@@ -1041,6 +1079,7 @@
             }
         }
 
+
         /* =====================================================
            MOBILE
         ===================================================== */
@@ -1091,9 +1130,13 @@
                     11px !important;
             }
 
+            .mod-area {
+                padding-right: 0;
+            }
+
             .mods-slider {
 
-                height: 500px;
+                height: 480px;
 
                 overflow: hidden;
             }
@@ -1126,42 +1169,40 @@
                     scale(0.70);
             }
 
-            .mod-card[data-position="4"] {
-
-                transform:
-                    translateX(-300px)
-                    scale(0.55);
-            }
-
             .mod-logo span {
 
                 font-size: 65px;
             }
 
-            .legality-selector {
+            .category-switcher {
 
-                right: 5px;
+                right: 4px;
 
-                width: 65px;
-
-                gap: 10px;
+                width: 55px;
             }
 
-            .legality-arrow {
+            .category-arrow {
 
-                width: 36px;
-                height: 36px;
+                width: 44px;
+                height: 44px;
 
-                font-size: 15px;
+                border-radius: 12px;
             }
 
-            .legality-label {
+            .category-arrow svg {
 
-                min-width: 60px;
+                width: 20px;
+                height: 20px;
+            }
+
+            .category-name {
+
+                min-width: 58px;
 
                 font-size: 8px;
 
-                letter-spacing: 0.5px;
+                padding:
+                    10px 3px;
             }
 
         }
@@ -1170,7 +1211,9 @@
 
 </head>
 
+
 <body>
+
 
     <!-- =====================================================
          NAVBAR
@@ -1192,6 +1235,7 @@
                 >
 
             </a>
+
 
             <nav class="nav-links">
 
@@ -1218,6 +1262,7 @@
                     </span>
 
                 </a>
+
 
                 <a href="#downloads">
 
@@ -1257,6 +1302,7 @@
 
                 </a>
 
+
                 <a
                     href="YOUR-DISCORD-LINK-HERE"
                     target="_blank"
@@ -1280,6 +1326,7 @@
                     </span>
 
                 </a>
+
 
                 <a
                     href="YOUR-YOUTUBE-LINK-HERE"
@@ -1305,6 +1352,7 @@
 
                 </a>
 
+
                 <a
                     href="#downloads"
                     class="get-mods-nav"
@@ -1318,11 +1366,13 @@
 
     </header>
 
+
     <!-- =====================================================
          MAIN
     ===================================================== -->
 
     <main>
+
 
         <!-- HOME -->
 
@@ -1345,6 +1395,7 @@
 
         </section>
 
+
         <!-- DOWNLOADS -->
 
         <section
@@ -1362,264 +1413,350 @@
                     Choose a mod below to get started.
                 </p>
 
-                <div class="mods-slider">
 
-                    <!-- METEOR CLIENT -->
+                <div class="mod-area">
 
-                    <div
-                        class="mod-card"
-                        data-index="0"
-                        data-position="0"
-                    >
+                    <div class="mods-slider">
 
-                        <div class="mod-logo">
 
-                            <span>
-                                M
-                            </span>
+                        <!-- =================================================
+                             ILLEGAL CARDS
+                        ================================================= -->
 
-                        </div>
+                        <div
+                            class="mod-card illegal-card"
+                            data-index="0"
+                            data-position="0"
+                        >
 
-                        <div class="mod-info">
+                            <div class="mod-logo">
+                                <span>M</span>
+                            </div>
 
-                            <h3>
-                                Meteor Client
-                            </h3>
+                            <div class="mod-info">
 
-                            <p>
-                                Use at your own risk
-                            </p>
+                                <h3>
+                                    Meteor Client
+                                </h3>
 
-                            <a
-                                href="Meteor-Client.jar"
-                                class="download-button"
-                                download
-                            >
-                                Download
-                            </a>
+                                <p>
+                                    Use at your own risk
+                                </p>
 
-                        </div>
+                                <a
+                                    href="Meteor-Client.jar"
+                                    class="download-button"
+                                    download
+                                >
+                                    Download
+                                </a>
 
-                    </div>
-
-                    <!-- GLAZED -->
-
-                    <div
-                        class="mod-card"
-                        data-index="1"
-                        data-position="1"
-                    >
-
-                        <div class="mod-logo">
-
-                            <span>
-                                G
-                            </span>
+                            </div>
 
                         </div>
 
-                        <div class="mod-info">
 
-                            <h3>
-                                Glazed
-                            </h3>
+                        <div
+                            class="mod-card illegal-card"
+                            data-index="1"
+                            data-position="1"
+                        >
 
-                            <p>
-                                Addon To Meteor Client
-                            </p>
+                            <div class="mod-logo">
+                                <span>G</span>
+                            </div>
 
-                            <a
-                                href="glazed-1.21.11-n-17.jar"
-                                class="download-button"
-                                download
-                            >
-                                Download
-                            </a>
+                            <div class="mod-info">
 
-                        </div>
+                                <h3>
+                                    Glazed
+                                </h3>
 
-                    </div>
+                                <p>
+                                    Addon To Meteor Client
+                                </p>
 
-                    <!-- OPSEC -->
+                                <a
+                                    href="glazed-1.21.11-n-17.jar"
+                                    class="download-button"
+                                    download
+                                >
+                                    Download
+                                </a>
 
-                    <div
-                        class="mod-card"
-                        data-index="2"
-                        data-position="2"
-                    >
-
-                        <div class="mod-logo">
-
-                            <span>
-                                O
-                            </span>
+                            </div>
 
                         </div>
 
-                        <div class="mod-info">
 
-                            <h3>
-                                Opsec
-                            </h3>
+                        <div
+                            class="mod-card illegal-card"
+                            data-index="2"
+                            data-position="2"
+                        >
 
-                            <p>
-                                The Best Bypasser For Servers
-                            </p>
+                            <div class="mod-logo">
+                                <span>O</span>
+                            </div>
 
-                            <a
-                                href="Opsec.jar"
-                                class="download-button"
-                                download
-                            >
-                                Download
-                            </a>
+                            <div class="mod-info">
 
-                        </div>
+                                <h3>
+                                    Opsec
+                                </h3>
 
-                    </div>
+                                <p>
+                                    The Best Bypasser For Servers
+                                </p>
 
-                    <!-- COMING SOON -->
+                                <a
+                                    href="Opsec.jar"
+                                    class="download-button"
+                                    download
+                                >
+                                    Download
+                                </a>
 
-                    <div
-                        class="mod-card"
-                        data-index="3"
-                        data-position="3"
-                    >
-
-                        <div class="mod-logo">
-
-                            <span>
-                                ?
-                            </span>
+                            </div>
 
                         </div>
 
-                        <div class="mod-info">
 
-                            <h3>
-                                Coming Soon
-                            </h3>
+                        <div
+                            class="mod-card illegal-card"
+                            data-index="3"
+                            data-position="3"
+                        >
 
-                            <p>
-                                A new mod will be available here soon.
-                            </p>
+                            <div class="mod-logo">
+                                <span>K</span>
+                            </div>
 
-                            <div
-                                class="download-button"
-                                style="
-                                    opacity: 0.45;
-                                    cursor: default;
-                                "
-                            >
-                                Coming Soon
+                            <div class="mod-info">
+
+                                <h3>
+                                    Krypton Client
+                                </h3>
+
+                                <p>
+                                    Best Client Overall
+                                </p>
+
+                                <a
+                                    href="KryptonCracked.jar"
+                                    class="download-button"
+                                    download
+                                >
+                                    Download
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             LEGAL CARDS
+                        ================================================= -->
+
+                        <div
+                            class="mod-card legal-card"
+                            data-index="0"
+                            data-position="0"
+                            style="display: none;"
+                        >
+
+                            <div class="mod-logo">
+                                <span>S</span>
+                            </div>
+
+                            <div class="mod-info">
+
+                                <h3>
+                                    Sodium
+                                </h3>
+
+                                <p>
+                                    Performance optimization mod
+                                </p>
+
+                                <a
+                                    href="Sodium.jar"
+                                    class="download-button"
+                                    download
+                                >
+                                    Download
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="mod-card legal-card"
+                            data-index="1"
+                            data-position="1"
+                            style="display: none;"
+                        >
+
+                            <div class="mod-logo">
+                                <span>I</span>
+                            </div>
+
+                            <div class="mod-info">
+
+                                <h3>
+                                    Iris
+                                </h3>
+
+                                <p>
+                                    High quality shader support
+                                </p>
+
+                                <a
+                                    href="Iris.jar"
+                                    class="download-button"
+                                    download
+                                >
+                                    Download
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="mod-card legal-card"
+                            data-index="2"
+                            data-position="2"
+                            style="display: none;"
+                        >
+
+                            <div class="mod-logo">
+                                <span>L</span>
+                            </div>
+
+                            <div class="mod-info">
+
+                                <h3>
+                                    Lithium
+                                </h3>
+
+                                <p>
+                                    Improve game performance
+                                </p>
+
+                                <a
+                                    href="Lithium.jar"
+                                    class="download-button"
+                                    download
+                                >
+                                    Download
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="mod-card legal-card"
+                            data-index="3"
+                            data-position="3"
+                            style="display: none;"
+                        >
+
+                            <div class="mod-logo">
+                                <span>F</span>
+                            </div>
+
+                            <div class="mod-info">
+
+                                <h3>
+                                    Fabric API
+                                </h3>
+
+                                <p>
+                                    Essential library for Fabric mods
+                                </p>
+
+                                <a
+                                    href="fabric-api.jar"
+                                    class="download-button"
+                                    download
+                                >
+                                    Download
+                                </a>
+
                             </div>
 
                         </div>
 
                     </div>
 
-                    <!-- KRYPTON CLIENT -->
-
-                    <div
-                        class="mod-card"
-                        data-index="4"
-                        data-position="4"
-                    >
-
-                        <div class="mod-logo">
-
-                            <span>
-                                K
-                            </span>
-
-                        </div>
-
-                        <div class="mod-info">
-
-                            <h3>
-                                Krypton Client
-                            </h3>
-
-                            <p>
-                                Best Client Overall
-                            </p>
-
-                            <a
-                                href="KryptonCracked.jar"
-                                class="download-button"
-                                download
-                            >
-                                Download
-                            </a>
-
-                        </div>
-
-                    </div>
 
                     <!-- =================================================
-                         LEGAL / ILLEGAL SELECTOR
-                    ================================================== -->
+                         CATEGORY SWITCHER
+                    ================================================= -->
 
-                    <div class="legality-selector">
+                    <div class="category-switcher">
 
                         <button
-                            class="legality-arrow"
-                            id="legal-up"
-                            aria-label="Set Legal"
+                            class="category-arrow"
+                            id="categoryUp"
+                            aria-label="Switch to Legal"
                         >
-                            ▲
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                            >
+
+                                <path
+                                    d="M6 14l6-6 6 6"
+                                    stroke="currentColor"
+                                    stroke-width="2.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+
+                            </svg>
+
                         </button>
 
+
                         <div
-                            class="legality-label"
-                            id="legality-label"
+                            class="category-name illegal"
+                            id="categoryName"
                         >
                             Illegal
                         </div>
 
+
                         <button
-                            class="legality-arrow"
-                            id="legal-down"
-                            aria-label="Set Illegal"
+                            class="category-arrow"
+                            id="categoryDown"
+                            aria-label="Switch to Legal"
                         >
-                            ▼
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                            >
+
+                                <path
+                                    d="M6 10l6 6 6-6"
+                                    stroke="currentColor"
+                                    stroke-width="2.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+
+                            </svg>
+
                         </button>
-
-                    </div>
-
-                    <!-- DOTS -->
-
-                    <div class="slider-controls">
-
-                        <button
-                            class="slider-dot active"
-                            data-slide="0"
-                            aria-label="Meteor Client"
-                        ></button>
-
-                        <button
-                            class="slider-dot"
-                            data-slide="1"
-                            aria-label="Glazed"
-                        ></button>
-
-                        <button
-                            class="slider-dot"
-                            data-slide="2"
-                            aria-label="Opsec"
-                        ></button>
-
-                        <button
-                            class="slider-dot"
-                            data-slide="3"
-                            aria-label="Coming Soon"
-                        ></button>
-
-                        <button
-                            class="slider-dot"
-                            data-slide="4"
-                            aria-label="Krypton Client"
-                        ></button>
 
                     </div>
 
@@ -1630,6 +1767,7 @@
         </section>
 
     </main>
+
 
     <!-- =====================================================
          SPACE BACKGROUND
@@ -1645,29 +1783,60 @@
 
     </div>
 
+
     <script>
 
         /* =====================================================
-           SLIDER
+           CATEGORY SWITCHER
         ===================================================== */
 
-        const cards =
-            [
-                ...document.querySelectorAll(
-                    ".mod-card"
-                )
-            ];
+        const illegalCards = [
+            ...document.querySelectorAll(
+                ".illegal-card"
+            )
+        ];
 
-        const dots =
-            [
-                ...document.querySelectorAll(
-                    ".slider-dot"
-                )
-            ];
+        const legalCards = [
+            ...document.querySelectorAll(
+                ".legal-card"
+            )
+        ];
+
+        const categoryName =
+            document.getElementById(
+                "categoryName"
+            );
+
+        const categoryUp =
+            document.getElementById(
+                "categoryUp"
+            );
+
+        const categoryDown =
+            document.getElementById(
+                "categoryDown"
+            );
+
+
+        let currentCategory = "illegal";
 
         let activeIndex = 0;
 
+
+        function getCurrentCards() {
+
+            return currentCategory === "illegal"
+                ? illegalCards
+                : legalCards;
+
+        }
+
+
         function updateSlider() {
+
+            const cards =
+                getCurrentCards();
+
 
             cards.forEach(
                 (card, index) => {
@@ -1680,24 +1849,15 @@
                         ) %
                         cards.length;
 
+
                     card.dataset.position =
                         position;
 
                 }
             );
 
-            dots.forEach(
-                (dot, index) => {
-
-                    dot.classList.toggle(
-                        "active",
-                        index === activeIndex
-                    );
-
-                }
-            );
-
         }
+
 
         function selectCard(index) {
 
@@ -1708,7 +1868,126 @@
 
         }
 
-        cards.forEach(
+
+        function switchCategory(category) {
+
+            currentCategory =
+                category;
+
+            activeIndex = 0;
+
+
+            illegalCards.forEach(
+                card => {
+
+                    card.style.display =
+                        currentCategory === "illegal"
+                            ? "block"
+                            : "none";
+
+                }
+            );
+
+
+            legalCards.forEach(
+                card => {
+
+                    card.style.display =
+                        currentCategory === "legal"
+                            ? "block"
+                            : "none";
+
+                }
+            );
+
+
+            if (
+                currentCategory === "legal"
+            ) {
+
+                categoryName.textContent =
+                    "Legal";
+
+                categoryName.classList.remove(
+                    "illegal"
+                );
+
+                categoryName.classList.add(
+                    "legal"
+                );
+
+                categoryUp.setAttribute(
+                    "aria-label",
+                    "Switch to Illegal"
+                );
+
+                categoryDown.setAttribute(
+                    "aria-label",
+                    "Switch to Illegal"
+                );
+
+            }
+
+            else {
+
+                categoryName.textContent =
+                    "Illegal";
+
+                categoryName.classList.remove(
+                    "legal"
+                );
+
+                categoryName.classList.add(
+                    "illegal"
+                );
+
+                categoryUp.setAttribute(
+                    "aria-label",
+                    "Switch to Legal"
+                );
+
+                categoryDown.setAttribute(
+                    "aria-label",
+                    "Switch to Legal"
+                );
+
+            }
+
+
+            updateSlider();
+
+        }
+
+
+        categoryUp.addEventListener(
+            "click",
+            function() {
+
+                switchCategory(
+                    currentCategory === "illegal"
+                        ? "legal"
+                        : "illegal"
+                );
+
+            }
+        );
+
+
+        categoryDown.addEventListener(
+            "click",
+            function() {
+
+                switchCategory(
+                    currentCategory === "illegal"
+                        ? "legal"
+                        : "illegal"
+                );
+
+            }
+        );
+
+
+        illegalCards.forEach(
             (card, index) => {
 
                 card.addEventListener(
@@ -1733,12 +2012,23 @@
             }
         );
 
-        dots.forEach(
-            (dot, index) => {
 
-                dot.addEventListener(
+        legalCards.forEach(
+            (card, index) => {
+
+                card.addEventListener(
                     "click",
-                    function() {
+                    function(event) {
+
+                        if (
+                            event.target.closest(
+                                ".download-button"
+                            )
+                        ) {
+
+                            return;
+
+                        }
 
                         selectCard(index);
 
@@ -1748,91 +2038,14 @@
             }
         );
 
-        updateSlider();
-
 
         /* =====================================================
-           LEGAL / ILLEGAL SELECTOR
+           INITIAL STATE
         ===================================================== */
 
-        const legalityLabel =
-            document.getElementById(
-                "legality-label"
-            );
-
-        const legalUp =
-            document.getElementById(
-                "legal-up"
-            );
-
-        const legalDown =
-            document.getElementById(
-                "legal-down"
-            );
-
-        let isLegal = false;
-
-
-        function updateLegality() {
-
-            if (isLegal) {
-
-                legalityLabel.textContent =
-                    "Legal";
-
-                legalityLabel.style.color =
-                    "#d9b5ff";
-
-                legalityLabel.style.textShadow =
-                    "0 0 10px rgba(190, 110, 255, 0.9)";
-
-            }
-
-            else {
-
-                legalityLabel.textContent =
-                    "Illegal";
-
-                legalityLabel.style.color =
-                    "white";
-
-                legalityLabel.style.textShadow =
-                    "0 0 10px rgba(180, 90, 255, 0.7)";
-
-            }
-
-        }
-
-
-        legalUp.addEventListener(
-            "click",
-            function(event) {
-
-                event.stopPropagation();
-
-                isLegal = true;
-
-                updateLegality();
-
-            }
+        switchCategory(
+            "illegal"
         );
-
-
-        legalDown.addEventListener(
-            "click",
-            function(event) {
-
-                event.stopPropagation();
-
-                isLegal = false;
-
-                updateLegality();
-
-            }
-        );
-
-
-        updateLegality();
 
 
         /* =====================================================
@@ -1844,8 +2057,10 @@
                 "space"
             );
 
+
         const starCount =
             320;
+
 
         for (
             let i = 0;
@@ -1858,12 +2073,15 @@
                     "div"
                 );
 
+
             star.classList.add(
                 "star"
             );
 
+
             const size =
                 Math.random();
+
 
             if (
                 size > 0.90
@@ -1885,15 +2103,18 @@
 
             }
 
+
             star.style.left =
                 Math.random() *
                 100 +
                 "%";
 
+
             star.style.top =
                 Math.random() *
                 100 +
                 "%";
+
 
             star.style.setProperty(
                 "--opacity",
@@ -1901,6 +2122,7 @@
                 Math.random() *
                 0.75
             );
+
 
             star.style.setProperty(
                 "--twinkle-time",
@@ -1910,10 +2132,12 @@
                 "s"
             );
 
+
             star.style.animationDelay =
                 Math.random() *
                 5 +
                 "s";
+
 
             space.appendChild(
                 star
