@@ -1,1 +1,622 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Space</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #000;
+        }
+
+        body {
+            position: relative;
+            font-family: Arial, sans-serif;
+        }
+
+        /* =========================
+           TOP NAVIGATION BAR
+        ========================= */
+
+        .navbar {
+            position: fixed;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            z-index: 100;
+
+            width: calc(100% - 30px);
+            max-width: 900px;
+            height: 60px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            padding: 7px;
+
+            background: rgba(35, 10, 65, 0.88);
+
+            border: 1px solid rgba(180, 100, 255, 0.18);
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 10px 35px rgba(0, 0, 0, 0.55),
+                0 0 25px rgba(100, 20, 180, 0.12);
+
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+
+        .nav-button {
+            height: 46px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            padding: 0 18px;
+
+            color: rgba(255, 255, 255, 0.85);
+
+            text-decoration: none;
+
+            font-size: 15px;
+            font-weight: 500;
+
+            border-radius: 12px;
+
+            transition:
+                background 0.25s ease,
+                color 0.25s ease,
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .nav-button:hover {
+            background: rgba(130, 50, 220, 0.25);
+
+            color: white;
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 0 18px rgba(150, 60, 255, 0.18);
+        }
+
+        .nav-icon {
+            font-size: 19px;
+            line-height: 1;
+        }
+
+        /* =========================
+           SPACE BACKGROUND
+        ========================= */
+
+        #space {
+            position: fixed;
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    ellipse at 20% 30%,
+                    rgba(100, 0, 180, 0.22) 0%,
+                    rgba(60, 0, 120, 0.10) 18%,
+                    transparent 45%
+                ),
+
+                radial-gradient(
+                    ellipse at 80% 65%,
+                    rgba(130, 0, 220, 0.18) 0%,
+                    rgba(70, 0, 130, 0.08) 20%,
+                    transparent 45%
+                ),
+
+                radial-gradient(
+                    ellipse at 50% 100%,
+                    rgba(90, 0, 180, 0.16) 0%,
+                    transparent 40%
+                ),
+
+                #000;
+        }
+
+        /* Purple galaxy clouds */
+
+        .purple-cloud {
+            position: absolute;
+
+            border-radius: 50%;
+
+            pointer-events: none;
+
+            filter: blur(60px);
+
+            opacity: 0.35;
+        }
+
+        .cloud1 {
+            width: 350px;
+            height: 180px;
+
+            left: -80px;
+            top: 15%;
+
+            background: rgba(110, 0, 220, 0.45);
+
+            transform: rotate(-25deg);
+        }
+
+        .cloud2 {
+            width: 450px;
+            height: 200px;
+
+            right: -100px;
+            top: 55%;
+
+            background: rgba(150, 0, 255, 0.35);
+
+            transform: rotate(20deg);
+        }
+
+        .cloud3 {
+            width: 300px;
+            height: 160px;
+
+            left: 35%;
+            bottom: -80px;
+
+            background: rgba(80, 0, 200, 0.35);
+        }
+
+        .cloud4 {
+            width: 250px;
+            height: 130px;
+
+            left: 55%;
+            top: 10%;
+
+            background: rgba(130, 20, 255, 0.22);
+
+            transform: rotate(-15deg);
+        }
+
+        /* =========================
+           NORMAL STARS
+        ========================= */
+
+        .star {
+            position: absolute;
+
+            width: 2px;
+            height: 2px;
+
+            background: white;
+
+            border-radius: 50%;
+
+            box-shadow:
+                0 0 5px white;
+
+            animation:
+                twinkle var(--twinkle-time)
+                ease-in-out infinite alternate;
+
+            opacity: var(--opacity);
+        }
+
+        .star.big {
+            width: 3px;
+            height: 3px;
+
+            box-shadow:
+                0 0 8px white,
+                0 0 15px rgba(180, 120, 255, 0.5);
+        }
+
+        .star.small {
+            width: 1px;
+            height: 1px;
+
+            box-shadow:
+                0 0 3px white;
+        }
+
+        /* =========================
+           TWINKLING
+        ========================= */
+
+        @keyframes twinkle {
+
+            0% {
+                opacity: 0.03;
+                transform: scale(0.6);
+            }
+
+            50% {
+                opacity: var(--opacity);
+                transform: scale(1);
+            }
+
+            100% {
+                opacity: 0.03;
+                transform: scale(0.6);
+            }
+        }
+
+        /* =========================
+           MOVING STARS
+        ========================= */
+
+        .moving-star {
+            position: absolute;
+
+            width: 3px;
+            height: 3px;
+
+            background: white;
+
+            border-radius: 50%;
+
+            box-shadow:
+                0 0 8px white,
+                0 0 15px rgba(180, 100, 255, 0.8);
+
+            animation:
+                moveStar var(--move-time)
+                linear forwards;
+        }
+
+        @keyframes moveStar {
+
+            from {
+                transform: translate(0, 0);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            to {
+                transform:
+                    translate(
+                        var(--move-x),
+                        var(--move-y)
+                    );
+
+                opacity: 0;
+            }
+        }
+
+        /* =========================
+           SHOOTING STARS
+        ========================= */
+
+        .shooting-star {
+            position: absolute;
+
+            width: 120px;
+            height: 2px;
+
+            background:
+                linear-gradient(
+                    to right,
+                    transparent,
+                    rgba(190, 100, 255, 0.5),
+                    white
+                );
+
+            border-radius: 50%;
+
+            box-shadow:
+                0 0 8px white,
+                0 0 15px rgba(170, 70, 255, 0.8);
+
+            transform: rotate(35deg);
+
+            animation:
+                shooting 1.2s linear forwards;
+        }
+
+        @keyframes shooting {
+
+            from {
+                transform:
+                    translate(0, 0)
+                    rotate(35deg);
+
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 1;
+            }
+
+            to {
+                transform:
+                    translate(500px, 350px)
+                    rotate(35deg);
+
+                opacity: 0;
+            }
+        }
+
+        /* =========================
+           MOBILE NAVIGATION
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .navbar {
+                height: 54px;
+                top: 10px;
+
+                gap: 2px;
+
+                padding: 5px;
+
+                border-radius: 15px;
+            }
+
+            .nav-button {
+                padding: 0 10px;
+                font-size: 12px;
+                gap: 5px;
+            }
+
+            .nav-icon {
+                font-size: 16px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav class="navbar">
+
+        <a href="#" class="nav-button">
+            <span class="nav-icon">🏠</span>
+            Home
+        </a>
+
+        <a href="#" class="nav-button">
+            <span class="nav-icon">⬇</span>
+            Downloads
+        </a>
+
+        <a href="#" class="nav-button">
+            <span class="nav-icon">🎮</span>
+            Discord
+        </a>
+
+        <a href="#" class="nav-button">
+            <span class="nav-icon">▶</span>
+            YouTube
+        </a>
+
+    </nav>
+
+
+    <!-- =========================
+         SPACE
+    ========================= -->
+
+    <div id="space">
+
+        <div class="purple-cloud cloud1"></div>
+        <div class="purple-cloud cloud2"></div>
+        <div class="purple-cloud cloud3"></div>
+        <div class="purple-cloud cloud4"></div>
+
+    </div>
+
+
+    <script>
+
+        const space =
+            document.getElementById("space");
+
+
+        /* =========================
+           CREATE STARS
+        ========================= */
+
+        const starCount = 300;
+
+        for (let i = 0; i < starCount; i++) {
+
+            const star =
+                document.createElement("div");
+
+            star.classList.add("star");
+
+            const size = Math.random();
+
+            if (size > 0.90) {
+
+                star.classList.add("big");
+
+            } else if (size < 0.35) {
+
+                star.classList.add("small");
+            }
+
+            star.style.left =
+                Math.random() * 100 + "%";
+
+            star.style.top =
+                Math.random() * 100 + "%";
+
+            star.style.setProperty(
+                "--opacity",
+                0.3 + Math.random() * 0.7
+            );
+
+            star.style.setProperty(
+                "--twinkle-time",
+                1.5 + Math.random() * 5 + "s"
+            );
+
+            star.style.animationDelay =
+                Math.random() * 5 + "s";
+
+            space.appendChild(star);
+        }
+
+
+        /* =========================
+           MOVING STARS
+        ========================= */
+
+        function createMovingStar() {
+
+            const star =
+                document.createElement("div");
+
+            star.classList.add(
+                "moving-star"
+            );
+
+            let startX;
+            let startY;
+
+            if (Math.random() < 0.5) {
+
+                startX =
+                    Math.random() * 100;
+
+                startY = -2;
+
+            } else {
+
+                startX = -2;
+
+                startY =
+                    Math.random() * 100;
+            }
+
+            star.style.left =
+                startX + "%";
+
+            star.style.top =
+                startY + "%";
+
+            const moveX =
+                100 + Math.random() * 500;
+
+            const moveY =
+                -100 + Math.random() * 600;
+
+            star.style.setProperty(
+                "--move-x",
+                moveX + "px"
+            );
+
+            star.style.setProperty(
+                "--move-y",
+                moveY + "px"
+            );
+
+            star.style.setProperty(
+                "--move-time",
+                3 + Math.random() * 5 + "s"
+            );
+
+            space.appendChild(star);
+
+            setTimeout(() => {
+                star.remove();
+            }, 9000);
+        }
+
+
+        setInterval(() => {
+
+            if (Math.random() < 0.75) {
+                createMovingStar();
+            }
+
+        }, 1000);
+
+
+        /* =========================
+           SHOOTING STARS
+        ========================= */
+
+        function createShootingStar() {
+
+            const star =
+                document.createElement("div");
+
+            star.classList.add(
+                "shooting-star"
+            );
+
+            star.style.left =
+                Math.random() * 55 + "%";
+
+            star.style.top =
+                Math.random() * 35 + "%";
+
+            space.appendChild(star);
+
+            setTimeout(() => {
+                star.remove();
+            }, 1300);
+        }
+
+
+        function randomShootingStar() {
+
+            createShootingStar();
+
+            const next =
+                3000 +
+                Math.random() * 5000;
+
+            setTimeout(
+                randomShootingStar,
+                next
+            );
+        }
+
+        randomShootingStar();
+
+    </script>
+
+</body>
+</html>
+```
 
