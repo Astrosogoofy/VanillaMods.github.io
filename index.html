@@ -53,8 +53,10 @@
             position: fixed;
             top: 0;
             left: 0;
+
             width: 100%;
             height: 64px;
+
             z-index: 1000;
 
             background:
@@ -77,6 +79,7 @@
         .nav-inner {
             width: 100%;
             height: 100%;
+
             padding: 0 28px;
 
             display: flex;
@@ -89,14 +92,17 @@
 
         .site-logo-link {
             position: absolute;
+
             left: 28px;
             top: 50%;
+
             transform: translateY(-50%);
         }
 
         .site-logo {
             width: 44px;
             height: 44px;
+
             object-fit: contain;
             display: block;
 
@@ -154,7 +160,9 @@
 
         .nav-links a:hover {
             color: white;
-            transform: translateY(-1px);
+
+            transform:
+                translateY(-1px);
         }
 
         .nav-links a::after {
@@ -192,7 +200,9 @@
         .icon {
             width: 19px;
             height: 19px;
+
             flex-shrink: 0;
+
             color: currentColor;
         }
 
@@ -497,15 +507,19 @@
         ===================================================== */
 
         .mod-card[data-position="0"] {
+
             transform:
                 translateX(0)
                 scale(1);
 
             z-index: 50;
+
             opacity: 1;
+
             filter: none;
 
             box-shadow:
+
                 0 25px 70px
                 rgba(0, 0, 0, 0.65),
 
@@ -514,11 +528,13 @@
         }
 
         .mod-card[data-position="1"] {
+
             transform:
                 translateX(390px)
                 scale(0.78);
 
             z-index: 30;
+
             opacity: 0.72;
 
             filter:
@@ -526,11 +542,13 @@
         }
 
         .mod-card[data-position="2"] {
+
             transform:
                 translateX(700px)
                 scale(0.62);
 
             z-index: 20;
+
             opacity: 0.42;
 
             filter:
@@ -538,11 +556,13 @@
         }
 
         .mod-card[data-position="3"] {
+
             transform:
                 translateX(-390px)
                 scale(0.78);
 
             z-index: 30;
+
             opacity: 0.72;
 
             filter:
@@ -550,11 +570,13 @@
         }
 
         .mod-card[data-position="4"] {
+
             transform:
                 translateX(-700px)
                 scale(0.62);
 
             z-index: 20;
+
             opacity: 0.42;
 
             filter:
@@ -563,6 +585,7 @@
 
         .mod-card[data-position="1"]:hover,
         .mod-card[data-position="3"]:hover {
+
             opacity: 0.95;
 
             filter:
@@ -574,6 +597,7 @@
         ===================================================== */
 
         .mod-logo {
+
             position: absolute;
 
             top: 0;
@@ -607,6 +631,7 @@
         }
 
         .mod-logo span {
+
             font-family:
                 "Orbitron",
                 Arial,
@@ -619,6 +644,7 @@
             color: white;
 
             text-shadow:
+
                 0 0 10px
                 rgba(210, 150, 255, 1),
 
@@ -634,6 +660,7 @@
         ===================================================== */
 
         .mod-info {
+
             position: absolute;
 
             left: 0;
@@ -654,6 +681,7 @@
         }
 
         .mod-info h3 {
+
             font-family:
                 "Orbitron",
                 Arial,
@@ -665,6 +693,7 @@
         }
 
         .mod-info p {
+
             font-size: 14px;
 
             line-height: 1.6;
@@ -680,6 +709,7 @@
         ===================================================== */
 
         .download-button {
+
             display: inline-flex;
 
             align-items: center;
@@ -719,10 +749,12 @@
         }
 
         .download-button:hover {
+
             transform:
                 translateY(-2px);
 
             box-shadow:
+
                 0 0 18px
                 rgba(175, 80, 255, 0.65),
 
@@ -731,58 +763,106 @@
         }
 
         /* =====================================================
-           SLIDER DOTS
+           LEGAL / ILLEGAL SELECTOR
         ===================================================== */
 
-        .slider-controls {
+        .legality-selector {
+
             position: absolute;
 
-            bottom: 0;
-            left: 50%;
+            right: 20px;
+            top: 50%;
 
-            transform: translateX(-50%);
+            transform:
+                translateY(-50%);
+
+            width: 115px;
 
             display: flex;
+
+            flex-direction: column;
+
             align-items: center;
+            justify-content: center;
 
-            gap: 9px;
+            gap: 16px;
 
-            z-index: 100;
+            z-index: 200;
         }
 
-        .slider-dot {
-            width: 9px;
-            height: 9px;
+        .legality-arrow {
 
-            padding: 0;
+            width: 46px;
+            height: 46px;
 
-            border: none;
-            border-radius: 50%;
+            border-radius: 12px;
+
+            border:
+                1px solid
+                rgba(190, 100, 255, 0.65);
 
             background:
-                rgba(200, 160, 230, 0.35);
+                linear-gradient(
+                    135deg,
+                    rgba(75, 20, 115, 0.8),
+                    rgba(35, 10, 60, 0.95)
+                );
+
+            color: white;
+
+            font-size: 20px;
+            font-weight: bold;
 
             cursor: pointer;
 
+            box-shadow:
+                0 0 12px
+                rgba(150, 60, 255, 0.25);
+
             transition:
-                transform 0.25s ease,
-                background 0.25s ease,
-                box-shadow 0.25s ease;
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                border-color 0.2s ease;
         }
 
-        .slider-dot:hover {
-            transform: scale(1.25);
-        }
+        .legality-arrow:hover {
 
-        .slider-dot.active {
-            transform: scale(1.3);
+            transform:
+                scale(1.08);
 
-            background:
-                #b66cff;
+            border-color:
+                rgba(225, 170, 255, 1);
 
             box-shadow:
+                0 0 18px
+                rgba(175, 80, 255, 0.65);
+        }
+
+        .legality-label {
+
+            min-width: 105px;
+
+            text-align: center;
+
+            font-family:
+                "Orbitron",
+                Arial,
+                sans-serif;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            color: white;
+
+            text-shadow:
                 0 0 10px
-                rgba(180, 90, 255, 0.85);
+                rgba(180, 90, 255, 0.7);
+
+            transition:
+                color 0.25s ease,
+                text-shadow 0.25s ease;
         }
 
         /* =====================================================
@@ -790,6 +870,7 @@
         ===================================================== */
 
         #space {
+
             position: fixed;
 
             inset: 0;
@@ -804,6 +885,7 @@
             pointer-events: none;
 
             background:
+
                 radial-gradient(
                     ellipse at 12% 22%,
                     rgba(115, 0, 220, 0.24),
@@ -828,6 +910,7 @@
         }
 
         .purple-cloud {
+
             position: absolute;
 
             border-radius: 50%;
@@ -838,6 +921,7 @@
         }
 
         .cloud1 {
+
             width: 420px;
             height: 200px;
 
@@ -852,6 +936,7 @@
         }
 
         .cloud2 {
+
             width: 500px;
             height: 220px;
 
@@ -866,6 +951,7 @@
         }
 
         .cloud3 {
+
             width: 400px;
             height: 180px;
 
@@ -881,6 +967,7 @@
         ===================================================== */
 
         .star {
+
             position: absolute;
 
             width: 2px;
@@ -905,6 +992,7 @@
         }
 
         .star.small {
+
             width: 1px;
             height: 1px;
 
@@ -913,10 +1001,12 @@
         }
 
         .star.big {
+
             width: 3px;
             height: 3px;
 
             box-shadow:
+
                 0 0 8px white,
 
                 0 0 15px
@@ -924,7 +1014,9 @@
         }
 
         @keyframes twinkle {
+
             0% {
+
                 opacity: 0.02;
 
                 transform:
@@ -932,6 +1024,7 @@
             }
 
             50% {
+
                 opacity:
                     var(--opacity);
 
@@ -940,6 +1033,7 @@
             }
 
             100% {
+
                 opacity: 0.02;
 
                 transform:
@@ -962,26 +1056,33 @@
             }
 
             .site-logo {
+
                 width: 38px;
                 height: 38px;
             }
 
             .nav-links {
+
                 gap: 10px;
             }
 
             .nav-links a {
+
                 font-size: 10px;
+
                 gap: 4px;
             }
 
             .icon {
+
                 width: 15px;
                 height: 15px;
             }
 
             .get-mods-nav {
+
                 min-width: 95px;
+
                 height: 40px;
 
                 padding: 0 12px;
@@ -991,42 +1092,78 @@
             }
 
             .mods-slider {
-                height: 480px;
+
+                height: 500px;
+
                 overflow: hidden;
             }
 
             .mod-card {
+
                 width: 285px;
+
                 height: 410px;
             }
 
             .mod-card[data-position="1"] {
+
                 transform:
                     translateX(180px)
                     scale(0.70);
             }
 
             .mod-card[data-position="2"] {
+
                 transform:
                     translateX(300px)
                     scale(0.55);
             }
 
             .mod-card[data-position="3"] {
+
                 transform:
                     translateX(-180px)
                     scale(0.70);
             }
 
             .mod-card[data-position="4"] {
+
                 transform:
                     translateX(-300px)
                     scale(0.55);
             }
 
             .mod-logo span {
+
                 font-size: 65px;
             }
+
+            .legality-selector {
+
+                right: 5px;
+
+                width: 65px;
+
+                gap: 10px;
+            }
+
+            .legality-arrow {
+
+                width: 36px;
+                height: 36px;
+
+                font-size: 15px;
+            }
+
+            .legality-label {
+
+                min-width: 60px;
+
+                font-size: 8px;
+
+                letter-spacing: 0.5px;
+            }
+
         }
 
     </style>
@@ -1187,6 +1324,8 @@
 
     <main>
 
+        <!-- HOME -->
+
         <section
             id="home"
             class="page-section"
@@ -1205,6 +1344,8 @@
             </div>
 
         </section>
+
+        <!-- DOWNLOADS -->
 
         <section
             id="downloads"
@@ -1232,7 +1373,11 @@
                     >
 
                         <div class="mod-logo">
-                            <span>M</span>
+
+                            <span>
+                                M
+                            </span>
+
                         </div>
 
                         <div class="mod-info">
@@ -1266,7 +1411,11 @@
                     >
 
                         <div class="mod-logo">
-                            <span>G</span>
+
+                            <span>
+                                G
+                            </span>
+
                         </div>
 
                         <div class="mod-info">
@@ -1300,7 +1449,11 @@
                     >
 
                         <div class="mod-logo">
-                            <span>O</span>
+
+                            <span>
+                                O
+                            </span>
+
                         </div>
 
                         <div class="mod-info">
@@ -1334,7 +1487,11 @@
                     >
 
                         <div class="mod-logo">
-                            <span>?</span>
+
+                            <span>
+                                ?
+                            </span>
+
                         </div>
 
                         <div class="mod-info">
@@ -1370,7 +1527,11 @@
                     >
 
                         <div class="mod-logo">
-                            <span>K</span>
+
+                            <span>
+                                K
+                            </span>
+
                         </div>
 
                         <div class="mod-info">
@@ -1392,6 +1553,37 @@
                             </a>
 
                         </div>
+
+                    </div>
+
+                    <!-- =================================================
+                         LEGAL / ILLEGAL SELECTOR
+                    ================================================== -->
+
+                    <div class="legality-selector">
+
+                        <button
+                            class="legality-arrow"
+                            id="legal-up"
+                            aria-label="Set Legal"
+                        >
+                            ▲
+                        </button>
+
+                        <div
+                            class="legality-label"
+                            id="legality-label"
+                        >
+                            Illegal
+                        </div>
+
+                        <button
+                            class="legality-arrow"
+                            id="legal-down"
+                            aria-label="Set Illegal"
+                        >
+                            ▼
+                        </button>
 
                     </div>
 
@@ -1446,7 +1638,9 @@
     <div id="space">
 
         <div class="purple-cloud cloud1"></div>
+
         <div class="purple-cloud cloud2"></div>
+
         <div class="purple-cloud cloud3"></div>
 
     </div>
@@ -1526,7 +1720,9 @@
                                 ".download-button"
                             )
                         ) {
+
                             return;
+
                         }
 
                         selectCard(index);
@@ -1553,6 +1749,91 @@
         );
 
         updateSlider();
+
+
+        /* =====================================================
+           LEGAL / ILLEGAL SELECTOR
+        ===================================================== */
+
+        const legalityLabel =
+            document.getElementById(
+                "legality-label"
+            );
+
+        const legalUp =
+            document.getElementById(
+                "legal-up"
+            );
+
+        const legalDown =
+            document.getElementById(
+                "legal-down"
+            );
+
+        let isLegal = false;
+
+
+        function updateLegality() {
+
+            if (isLegal) {
+
+                legalityLabel.textContent =
+                    "Legal";
+
+                legalityLabel.style.color =
+                    "#d9b5ff";
+
+                legalityLabel.style.textShadow =
+                    "0 0 10px rgba(190, 110, 255, 0.9)";
+
+            }
+
+            else {
+
+                legalityLabel.textContent =
+                    "Illegal";
+
+                legalityLabel.style.color =
+                    "white";
+
+                legalityLabel.style.textShadow =
+                    "0 0 10px rgba(180, 90, 255, 0.7)";
+
+            }
+
+        }
+
+
+        legalUp.addEventListener(
+            "click",
+            function(event) {
+
+                event.stopPropagation();
+
+                isLegal = true;
+
+                updateLegality();
+
+            }
+        );
+
+
+        legalDown.addEventListener(
+            "click",
+            function(event) {
+
+                event.stopPropagation();
+
+                isLegal = false;
+
+                updateLegality();
+
+            }
+        );
+
+
+        updateLegality();
+
 
         /* =====================================================
            STAR FIELD
